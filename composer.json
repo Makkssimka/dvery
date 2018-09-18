@@ -1,0 +1,27 @@
+{
+    "name": "makkssimka/dvery.ro",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Makkssimka",
+            "email": "maxvolgstom@yandex.ru"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "twig/twig": "^2.0",
+        "illuminate/database": "^5.7"
+    },
+	
+	 "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\Controllers\\": "app/Controllers",
+            "App\\Models\\": "app/Models",
+            "App\\Helpers\\": "app/Helpers"
+        },
+        "files": [
+            "config/config.php"
+        ]
+    }
+}
