@@ -6,7 +6,7 @@ class Config{
     static public $siteDescription      = 'Двери';
     static public $dbdriver             = 'mysql';
     static public $dbhost               = 'localhost';
-    static public $dbname               = 'radionew';
+    static public $dbname               = 'dvery';
     static public $dbuser               = 'root';
     static public $dbpassword           = '';
 

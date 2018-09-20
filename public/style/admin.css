@@ -8,6 +8,57 @@
     padding: 20px;
     width: 250px; }
   .login-wrapper img {
-    width: 200px; }
+    width: 200px;
+    margin-bottom: 20px; }
   .login-wrapper h3 {
     margin: 15px auto; }
+
+.alert {
+  position: fixed;
+  width: 300px;
+  right: calc(50% - 165px); }
+
+.content-wrapper {
+  display: flex;
+  min-height: 100vh; }
+
+.menu-wrapper {
+  width: 250px;
+  background-color: #80BDF8; }
+
+.logo-menu {
+  background-color: #ffffff;
+  height: 40px;
+  padding: 10px;
+  text-align: center; }
+  .logo-menu img {
+    height: 100%;
+    width: auto; }
+
+.content {
+  width: 100%; }
+  .content .header-content {
+    padding: 10px;
+    height: 40px;
+    background: #80BDF8;
+    position: relative; }
+    .content .header-content h4 {
+      margin-left: 20px;
+      line-height: 40px;
+      color: #ffffff; }
+    .content .header-content button {
+      width: 40px;
+      height: 40px;
+      right: 25px;
+      top: 10px;
+      position: absolute;
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      padding: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s; }
+      .content .header-content button:hover {
+        background-color: #fff;
+        color: #80BDF8; }
