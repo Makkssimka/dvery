@@ -1,0 +1,13 @@
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .login-wrapper .card {
+    text-align: center;
+    padding: 20px;
+    width: 250px; }
+  .login-wrapper img {
+    width: 200px; }
+  .login-wrapper h3 {
+    margin: 15px auto; }
