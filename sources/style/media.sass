@@ -1,0 +1,268 @@
+@media screen and (max-width: 1650px)
+  // ------ Стили для страницы каталог ------ //
+  // стили фтльтра
+  .category-filter
+    padding: 10px
+    position: relative
+    top: auto
+    left: auto
+    width: auto
+    h4
+      display: none
+    .filter-list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+    .filter-wrapper
+      margin: 10px
+      width: calc(100% / 4 - 54px)
+  .catalog-list
+    .catalog-header
+      .blue-but-black
+        display: inline-block
+
+@media screen and (max-width: 1100px)
+  .header-wrapper
+    background-color: rgba(8, 61, 119, 0.7)
+    &:before
+      width: 100%
+      z-index: -100
+    .container
+      flex-direction: column-reverse
+    .right-block-header, .left-block-header
+      width: calc(100% - 80px)
+      height: auto
+    .left-block-header
+      padding: 0 40px
+    .right-block-header
+      padding: 28px 40px
+  .menu-wrapper
+    svg
+      fill: #fff
+    ul
+      text-align: center
+    a
+      color: #fff
+  .logo-wrapper
+    text-align: center
+  .slider-wrapper
+    margin-top: 25vh
+    margin-bottom: auto
+    text-align: center
+    h1
+      text-align: center
+      &:before
+        right: calc(50% - 50px)
+  .nav-slider
+    left: 0
+    right: 0
+    bottom: -85vh
+    text-align: center
+    a.active-slide
+      background-color: #fff
+      border-color: #fff
+  .contact-wrapper
+    display: none
+
+  // Блок перейти в каталог
+  .all-select-wrapper
+    background-size: cover
+
+  // Блок карта главной страницы
+  .index-map-wrapper
+    .map-position
+      left: 45%
+
+  // ------ Стили для страницы каталог ------ //
+  // стили меню
+  .menu-more-list a
+    font-size: 14px
+    padding: 5px
+  // стили фтльтра
+  .category-filter
+    .filter-wrapper
+      margin: 10px
+      width: calc(100% / 2 - 54px)
+
+@media screen and (max-width: 800px)
+  //Блок выбрать раздел
+  .section-wrapper
+    margin: 40px 0
+  .section
+    &:before
+      filter: none
+    a
+      right: 0
+  .section-1, .section-2, .section-3, .topic
+    width: calc(100% - 20px)
+
+  // Блок выбора дверей
+  .door-wrapper
+    margin: 40px 0
+  .door-topic, .door-section-h, .door-section-v
+    width: 100%
+    .door-desc
+      right: 0
+  .door-section-v
+    position: relative
+    height: 340px
+    bottom: 0
+    right: 0
+    margin: 10px
+    .door-desc
+      width: 250px
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      transition: right 0.5s
+
+  //Блок лидеры продаж и новые поступления
+  .hit-wrapper
+    .item-door
+      width: calc(100% / 2 - 50px)
+
+  // Блок подвала
+  .footer
+    .footer-block
+      width: calc(100% / 3 - 30px)
+    .footer-logo
+      width: calc(100% - 30px)
+
+  // ------ Стили для страницы каталог ------ //
+  // стили меню
+  .menu-more-wrapper
+    &:before
+      right: 0
+  .menu-more-list
+    position: relative
+    li
+      display: none
+    li.menu-but
+      display: block
+    svg
+      position: absolute
+      right: 50%
+      top: calc(50% - 12px)
+      fill: #fff
+      height: 20px
+  .menu-more-logo
+    width: calc(100% - 20px)
+
+  // каталог стили
+  .catalog-list
+    padding: 15px 0
+    .catalog-header
+      h1
+        margin-bottom: 10px
+      .wrap-more-select
+        position: relative
+    .catalog-content
+      margin: 15px 0
+    .cat-item-door
+      width: calc(100% / 3 - 42px)
+@media screen and (max-width: 500px)
+  .header-wrapper
+    .right-block-header, .left-block-header
+      width: calc(100% - 30px)
+      height: auto
+    .left-block-header
+      padding: 0 15px
+    .right-block-header
+      padding: 15px 15px
+  .slider-wrapper
+    margin-top: 15vh
+    h1
+      font-size: 40px
+  .nav-slider
+    bottom: -80vh
+  .menu-wrapper
+    li
+      display: none
+    li.desc
+      display: block
+      color: #fff
+      width: 60%
+      margin: 0 auto
+      text-transform: uppercase
+      font-size: 14px
+    li.menu-but
+      display: block
+      position: absolute
+      right: 0
+      bottom: 0
+
+  //Блок выбрать раздел
+  .section-wrapper
+    margin: 20px 0
+  .section
+    height: 250px
+  .topic
+    h2
+      font-size: 30px
+
+  // Блок перейти в каталог
+  .all-select
+    width: 100%
+    background-color: rgba(8, 61, 119, 0.7)
+    h3
+      font-size: 30px
+
+  // Блок выбора дверей
+  .door-wrapper
+    margin: 20px 0
+  .door-topic
+    h2
+      font-size: 30px
+  .door-topic, .door-section-h, .door-section-v
+    height: auto
+    min-height: 250px
+    h3
+      width: 100%
+      text-align: center
+      position: relative
+      z-index: 10
+    .door-desc
+      background-color: rgba(8, 61, 119, 0.7)
+      width: 100%
+      top: 44px
+      height: auto
+      bottom: 0
+
+  //Блок лидеры продаж и новые поступления
+  .hit-wrapper
+    padding: 20px 0
+    .item-door
+      width: calc(100% / 1 - 50px)
+
+  // Блок карта главной страницы
+  .index-map-wrapper
+    .index-map
+      background-color: rgba(8, 61, 119, 0.7)
+      width: 100%
+    .map-position
+      left: 0
+
+  // Блок подвала
+  .footer
+    .footer-block
+      text-align: center
+      width: calc(100% - 30px)
+
+  // ------ Стили для страницы каталог ------ //
+  // стили каталог
+  .catalog-list
+   padding: 15px 0
+   .cat-item-door
+     width: calc(100% / 2 - 32px)
+     margin: 5px
+     h4
+       font-size: 16px
+  // стили фтльтра
+  .category-filter
+    margin-top: 5px
+    .filter-button
+      margin-top: 10px
+    .filter-wrapper
+      margin: 5px
+      width: calc(100% / 1 - 44px)

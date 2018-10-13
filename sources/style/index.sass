@@ -1,0 +1,878 @@
+$blue: #083D77
+$blue-hover: #071f3e
+$grey: #f4f4f4
+$grey-black: #CDCDCD
+$yellow: #F4D35E
+$orange: #F95738
+$text-color: #333
+$red: #d9001b
+
+body, h1, h2, h4, p
+  font-family: 'Avenir Next Cyr'
+.container
+  max-width: 1100px
+  display: flex
+  margin: 0 auto
+a.yellow-but
+  display: inline-block
+  padding: 8px 15px
+  border: 1px solid $yellow
+  background-color: $yellow
+  color: $text-color
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: 600
+  transition: all 0.3s
+  &:hover
+    background-color: transparent
+    color: $yellow
+a.blue-but
+  display: inline-block
+  padding: 8px 15px
+  border: 1px solid $blue
+  color: $blue
+  font-weight: 600
+  text-decoration: none
+  text-transform: uppercase
+  transition: all 0.3s
+  &:hover
+    background-color: $blue
+    color: #ffffff
+a.blue-but-black
+  display: inline-block
+  padding: 8px 15px
+  border: 1px solid $blue
+  background-color: $blue
+  color: #fff
+  font-weight: 600
+  text-decoration: none
+  text-transform: uppercase
+  transition: all 0.3s
+  &:hover
+    background-color: $blue-hover
+a.red-but
+  display: inline-block
+  padding: 8px 15px
+  border: 1px solid $red
+  color: $red
+  font-weight: 600
+  text-decoration: none
+  text-transform: uppercase
+  transition: all 0.3s
+  &:hover
+    background-color: $red
+    color: #ffffff
+a.orange-but
+  display: inline-block
+  padding: 8px 15px
+  border: 1px solid $orange
+  background-color: $orange
+  color: #ffffff
+  font-weight: 600
+  text-decoration: none
+  text-transform: uppercase
+  transition: all 0.3s
+  &:hover
+    background-color: transparent
+    color: $orange
+
+// Первый экран
+
+.header-wrapper
+  background-color: $blue
+  position: relative
+  min-height: 100vh
+  &:before
+    content: ''
+    position: absolute
+    width: 55%
+    right: 0
+    top: 0
+    bottom: 0
+    background: url("/public/images/bg_index.jpg") no-repeat -100px 0
+    background-size: cover
+.right-block-header, .left-block-header
+  position: relative
+  height: calc(100vh - 56px)
+  padding: 28px
+.left-block-header
+  width: calc(41% - 56px)
+.right-block-header
+  width: calc(59% - 56px)
+.logo-wrapper
+  font-size: 25px
+  font-weight: bold
+  color: #fff
+  text-align: right
+  img
+    height: 40px
+    width: auto
+.slider-wrapper
+  margin-top: 30vh
+  text-align: right
+  margin-bottom: 100px
+  ul
+    height: 270px
+  h1
+    position: relative
+    text-transform: uppercase
+    font-size: 55px
+    font-weight: bold
+    color: #fff
+    &:before
+      content: ''
+      position: absolute
+      height: 8px
+      width: 100px
+      background-color: $yellow
+      right: 0
+      bottom: -20px
+  span
+    color: $yellow
+  a
+    display: inline-block
+    text-transform: uppercase
+    color: #ffffff
+    text-decoration: none
+    font-size: 16px
+    margin-top: 15px
+    padding: 5px 10px
+    transition: all 0.3s
+    &:hover
+      background-color: $yellow
+      color: $text-color
+.contact-wrapper
+  text-align: right
+  position: absolute
+  right: 28px
+  bottom: 28px
+  a
+    color: $orange
+    font-weight: bold
+    font-size: 18px
+  p
+    color: #ffffff
+    font-size: 18px
+    margin: auto
+.menu-wrapper
+  position: relative
+  z-index: 10
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+  li
+    display: inline-block
+    margin: 0 8px
+  li.desc
+    display: none
+  a
+    text-transform: uppercase
+    color: $text-color
+    font-size: 16px
+    font-weight: 600
+    line-height: 40px
+    padding: 5px 10px
+    text-decoration: none
+    transition: all 0.3s
+    &:hover
+      color: #ffffff
+      background-color: $orange
+  a.active
+    color: #ffffff
+    background-color: $orange
+  svg
+    fill: $text-color
+    position: relative
+    top: -3px
+    height: 20px
+    width: auto
+.menu-but
+  cursor: pointer
+.nav-slider
+  position: absolute
+  bottom: 28px
+  right: 28px
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+  li
+    display: inline-block
+    margin: 0 5px
+  a
+    display: inline-block
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    border: 2px solid $orange
+    background-color: $orange
+  a.active-slide
+    background-color: $blue
+    border-color: $blue
+.uk-offcanvas-bar
+  background-color: #fff
+  color: $text-color
+  box-shadow: -2px 0 10px rgba(0,0,0, 0.2)
+.uk-nav>li>a
+  color: $text-color
+  font-size: 16px
+  padding: 4px 8px
+  display: block
+  transition: all 0.3s
+  &:hover
+    background-color: $orange
+.uk-nav-header
+  font-size: 16px
+  font-weight: 600
+  margin-top: 15px
+.uk-offcanvas-bar
+  .uk-offcanvas-close
+    color: $text-color
+    font-size: 25px
+    &:hover
+      color: $orange
+
+//Блок выбрать раздел
+.section-wrapper
+  margin: 60px 0
+  .container
+    flex-wrap: wrap
+.section
+  height: 340px
+  margin: 10px
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: -10
+    filter: blur(3px)
+    transition: filter 0.5s
+  h3
+    position: absolute
+    display: inline-block
+    padding: 10px
+    background-color: $yellow
+    font-weight: 600
+    text-transform: uppercase
+    font-size: 18px
+    &:first-letter
+      color: $orange
+  a
+    display: inline-block
+    position: absolute
+    padding: 20px
+    background-color: $orange
+    color: $text-color
+    text-transform: uppercase
+    font-weight: 600
+    text-decoration: none
+    right: -100%
+    bottom: 0
+    transition: right 0.5s
+  &:hover
+    a
+      right: 0
+    &:before
+      filter: none
+.topic
+  width: 380px
+  background-color: $yellow
+  display: flex
+  justify-content: center
+  align-items: center
+  h2
+    display: inline-block
+    font-size: 35px
+    text-transform: uppercase
+    text-align: left
+    font-weight: bold
+  span
+    color: $orange
+.section-1, .section-3
+  width: calc(100% - 420px)
+.section-1:before
+  background: $blue url("/public/images/section_1_bg.jpg") center center no-repeat
+  background-size: cover
+.section-3:before
+  background: $blue url("/public/images/section_3_bg.jpg") center center no-repeat
+  background-size: cover
+.section-2
+  width: 380px
+  &:before
+    background: $yellow url("/public/images/section_2_bg.jpg") center center no-repeat
+    background-size: cover
+
+// Блок перейти в каталог
+
+.all-select-wrapper
+  height: auto
+  background: $blue url("/public/images/all_select_bg.jpg") 0 center no-repeat
+  background-size: 70%
+  .container
+    justify-content: flex-end
+.all-select
+  background-color: $blue
+  width: 350px
+  padding: 30px
+  h3
+    color: #ffffff
+    font-weight: bold
+    font-size: 35px
+    text-transform: uppercase
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      height: 8px
+      width: 100px
+      background-color: $yellow
+      bottom: -12px
+      left: 0
+  p
+    color: #fff
+
+// Блок выбора дверей
+.door-wrapper
+  margin: 60px 0
+  .container
+    flex-wrap: wrap
+    position: relative
+.door-topic, .door-section-h
+  margin: 10px
+  height: 340px
+.door-topic, .door-section-h, .door-section-v
+  position: relative
+  overflow: hidden
+  background: $blue center center no-repeat
+  background-size: cover
+  h3
+    position: absolute
+    display: inline-block
+    padding: 10px
+    background-color: $yellow
+    font-weight: 600
+    text-transform: uppercase
+    font-size: 18px
+    &:first-letter
+      color: $orange
+.door-desc
+  background-color: $blue
+  position: absolute
+  display: flex
+  align-items: center
+  color: #ffffff
+.door-desc-wrapper
+  padding: 0 20px
+.door-topic
+  width: 380px
+  background-color: $yellow
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  p
+    position: absolute
+    top: 10px
+    left: 10px
+    font-size: 22px
+    color: $text-color
+    text-transform: uppercase
+  h2
+    display: inline-block
+    font-size: 35px
+    text-transform: uppercase
+    text-align: left
+    font-weight: bold
+  span
+    color: $orange
+.door-section-h
+  width: calc(100% - 420px)
+  .door-desc
+    width: 250px
+    height: 100%
+    top: 0
+    right: -100%
+    transition: right 0.5s
+  &:hover
+    .door-desc
+      right: 0
+.door-section-v
+  position: absolute
+  bottom: 10px
+  right: 10px
+  width: 380px
+  height: 700px
+  .door-desc
+    height: 250px
+    width: 100%
+    bottom: -100%
+    transition: bottom 0.5s
+  &:hover
+    .door-desc
+      bottom: 0
+.door-mk-1
+  background-image: url("/public/images/door_mk_1.jpg")
+.door-mk-2
+  background-image: url("/public/images/door_mk_2.jpg")
+.door-mk-3
+  background-image: url("/public/images/door_mk_3.jpg")
+.door-mk-4
+  background-image: url("/public/images/door_mk_4.jpg")
+  
+//Блок лидеры продаж и новые поступления
+.hit-wrapper
+  background-color: $grey
+  padding: 20px 0
+  h3
+    font-size: 18px
+    font-weight: 600
+    text-transform: uppercase
+    margin: 10px
+    span
+      color: $orange
+  .hit
+    width: calc(100% - 20px)
+    margin: 20px 10px
+  .item-door
+    text-align: center
+    margin: 10px
+    width: calc(100% / 4 - 50px)
+    padding: 15px
+    background-color: #fff
+    border: $grey-black 1px solid
+    .more-info
+      overflow: hidden
+      height: 0
+      transition: all 0.5s
+    &:hover
+      .more-info
+        height: 105px
+      img
+        height: 145px
+    a
+      display: block
+      width: 150px
+      margin: 10px auto
+    img
+      height: 250px
+      width: auto
+      transition: all 0.5s
+    p
+      color: $text-color
+      margin: 5px 0
+    .name
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 18px
+    .price
+      font-size: 18px
+      span
+        font-weight: bold
+  .door-nav
+    margin-top: 15px
+    text-align: center
+    .uk-slidenav
+      color: $text-color
+      opacity: 0.5
+      transition: opacity 0.3s
+      &:hover
+        opacity: 1
+    .more-product
+      color: $text-color
+      background-color: $yellow
+      text-transform: uppercase
+      text-decoration: none
+      display: inline-block
+      width: 70%
+      padding: 8px 0
+      text-align: center
+      border: 1px solid $yellow
+      transition: all 0.3s
+      font-weight: 600
+      &:hover
+        background-color: transparent
+
+// Блок карта главной страницы
+.index-map-wrapper
+  background-color: $blue
+  position: relative
+  .index-map
+    background-color: $blue
+    width: 350px
+    padding: 30px
+    position: relative
+    z-index: 10
+    h3
+      color: #ffffff
+      font-weight: bold
+      font-size: 35px
+      text-transform: uppercase
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        height: 8px
+        width: 100px
+        background-color: $yellow
+        bottom: -12px
+        left: 0
+    p
+      color: #fff
+  .map-position
+    position: absolute
+    top: 0
+    left: 30%
+    right: 0
+
+// Блок входные двери
+.door-vh-1
+  background-image: url("/public/images/door_vh_1.jpg")
+.door-vh-2
+  background-image: url("/public/images/door_vh_2.jpg")
+.door-vh-3
+  background-image: url("/public/images/door_vh_3.jpg")
+.door-vh-4
+  background-image: url("/public/images/door_vh_4.jpg")
+
+// Блок подвала
+.footer
+  background-color: $blue
+  padding: 40px
+  .container
+    flex-wrap: wrap
+  .footer-block
+    width: calc(100% / 4 - 30px)
+    margin: 0 15px
+  .footer-logo
+    text-align: center
+    img
+      height: 40px
+      width: auto
+    h3
+      margin: 0 0 20px
+      padding: 0
+      color: #ffffff
+      font-size: 25px
+      text-transform: uppercase
+      font-weight: bold
+    p
+      color: #ffffff
+      font-size: 14px
+  .sub-menu
+    a
+      color: #ffffff
+    .uk-nav-header
+      color: #ffffff
+      padding: 5px 8px
+
+// ------ Стили для страницы каталог ------ //
+// Стили меню
+.menu-more-wrapper
+  background-color: #ffffff
+  position: relative
+  box-shadow: 0 0 1px rgba(0,0,0,0.25)
+  .container
+    z-index: 10
+    position: relative
+  &:before
+    content: ''
+    position: absolute
+    height: 100%
+    left: 0
+    right: 70%
+    top: 0
+    background-color: $blue
+.menu-more-logo
+  margin: 0 10px
+  padding: 10px
+  display: flex
+  flex-direction: row
+  width: calc(30% - 20px)
+  background-color: $blue
+  justify-content: center
+  img
+    height: 40px
+    width: auto
+  p
+    color: #ffffff
+    font-size: 25px
+    font-weight: bold
+    text-transform: uppercase
+    margin: 0
+.menu-more-list
+  padding: 10px
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+  li
+    display: inline-block
+  a
+    text-transform: uppercase
+    color: $text-color
+    font-size: 16px
+    font-weight: 600
+    line-height: 40px
+    padding: 5px 10px
+    text-decoration: none
+    transition: all 0.3s
+    &:hover
+      color: #ffffff
+      background-color: $orange
+  a.active
+    color: #ffffff
+    background-color: $orange
+  svg
+    fill: $text-color
+    position: relative
+    top: -3px
+    height: 20px
+    width: auto
+  .menu-but
+    margin-left: 20px
+// Хлебные крошкти
+.breadcrumb
+  background-color: $grey
+  padding: 25px 0 0
+  ul
+    margin: 0 10px
+    padding: 0
+  .uk-breadcrumb
+    &>*>*
+      font-size: 1rem
+    &>:last-child>*
+      color: $orange
+// каталог стили
+.catalog-list
+  background-color: $grey
+  padding: 25px 0
+  min-height: 780px
+  .container
+    flex-direction: column
+    position: relative
+  .catalog-header
+    position: relative
+    width: calc(100% - 20px)
+    margin: 0 10px
+    h1
+      font-size: 28px
+      text-transform: uppercase
+      margin: 0
+    .wrap-more-select
+      position: absolute
+      right: 0
+      bottom: 0
+    .blue-but-black
+      display: none
+      text-transform: none
+      padding: 6px 15px
+      position: relative
+      bottom: -1px
+      margin-right: 5px
+    select
+      width: auto
+  .catalog-content
+    margin: 25px 0
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+  .cat-item-door
+    background-color: #fff
+    border: 1px solid $grey-black
+    padding: 15px 10px
+    margin: 10px
+    text-align: center
+    width: calc(100% / 4 - 42px)
+    img
+      height: 250px
+      width: auto
+      background-color: $blue
+      transition: all 0.5s
+    h4
+      margin: 20px 0 0
+      text-transform: uppercase
+      color: $text-color
+      font-size: 18px
+      font-weight: bold
+      min-height: 50px
+    p
+      margin: 10px 0
+    .vendor-door
+      margin: 0
+    .color-door
+      font-weight: 600
+      color: $blue
+      margin: 0
+    .price-door
+      color: $text-color
+      font-size: 18px
+      span
+        font-weight: bold
+    .more-info
+      overflow: hidden
+      height: 0
+      transition: all 0.5s
+      a
+        display: block
+        max-width: 150px
+        margin: 10px auto 0
+    &:hover
+      img
+        height: 145px
+      .more-info
+        height: 105px
+  .catalog-pagination
+    font-size: 18px
+    text-align: center
+    ul
+      display: inline-block
+      margin: 0
+      padding: 0
+      background-color: #fff
+      border: 1px solid $grey-black
+      list-style: none
+    li
+      display: inline-block
+    a
+      display: inline-block
+      padding: 10px 12px
+      color: $text-color
+      transition: background-color 0.3s
+      text-decoration: none
+      &:hover
+        background-color: $yellow
+    a.uk-disabled
+      background-color: $yellow
+
+  .list-enter-active
+    transition: all 1s
+  .list-enter
+    opacity: 0
+    transform: translateY(30px)
+  .loading, .no-search
+    font-size: 18px
+  .no-search
+    display: none
+  .l-show
+    display: inline-block
+  .l-hide
+    display: none
+// стили фильтра
+.category-filter
+  position: absolute
+  width: 250px
+  top: 0
+  left: -260px
+  transition: top 0.5s
+  h4
+    font-size: 20px
+    font-weight: 600
+    line-height: 33px
+    margin: 0 0 35px
+  .filter-wrapper
+    padding: 15px
+    background-color: #fff
+    border: 1px solid $grey-black
+    margin-top: 20px
+  p
+    margin: 0
+    font-size: 18px
+    font-weight: 600
+    color: $text-color
+  .group-filter
+    margin: 10px 0
+    position: relative
+    label
+      cursor: pointer
+      color: $text-color
+      display: block
+      position: relative
+      z-index: 10
+    input[type="checkbox"]
+      display: none
+    input[type="text"]
+      border: 1px solid $grey-black
+      padding: 5px
+      &:focus
+        outline: none
+        border: 1px solid $orange
+    .check-custom
+      position: absolute
+      display: inline-block
+      height: 16px
+      width: 16px
+      border: 1px solid $grey-black
+      right: 0
+      top: 4px
+      z-index: 5
+    input[type="checkbox"]:checked
+      &~span:before
+        content: ''
+        position: absolute
+        height: 10px
+        width: 10px
+        background-color: $orange
+        top: 3px
+        right: 3px
+  .filter-button
+    text-align: center
+    margin-top: 20px
+    .blue-but, .red-but
+      margin: 0 2px
+      font-size: 14px
+
+// ------ Стили для страницы дверь ------ //
+// Стили контента
+.door-page-wrapper
+  background-color: $grey
+  padding: 25px 0
+  .gallery-door, .info-door
+    width: calc(100% / 2)
+  h1, h2
+    margin: 0
+    text-transform: uppercase
+  h2
+    font-size: 28px
+    color: #666
+  h1
+    font-size: 34px
+    font-weight: 600
+  ul
+    margin: 25px 0
+    color: $text-color
+    list-style: none
+    padding: 0
+    li
+      margin: 5px 0
+    span
+      font-weight: bold
+.price-door-wrapper
+  color: $text-color
+  margin: 25px 0
+  span.icon
+    cursor: pointer
+    color: $orange
+    position: relative
+    top: -3px
+  .uk-dropdown
+    padding: 15px
+    color: $text-color
+  ol
+    margin: 0
+    padding-left: 16px
+.new-price-door
+  font-size: 34px
+  font-weight: 600
+  line-height: 30px
+.old-price-door
+  font-size: 26px
+  text-decoration: line-through
+  color: #666
+

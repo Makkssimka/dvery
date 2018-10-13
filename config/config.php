@@ -2,8 +2,8 @@
 
 class Config{
 
-    static public $siteName             = 'Двери';
-    static public $siteDescription      = 'Двери';
+    static public $siteName             = 'Входные и межкомнатные двери';
+    static public $siteDescription      = 'Двери хорошие и отличные';
     static public $dbdriver             = 'mysql';
     static public $dbhost               = 'localhost';
     static public $dbname               = 'dvery';

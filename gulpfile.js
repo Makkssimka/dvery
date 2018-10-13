@@ -13,7 +13,8 @@ gulp.task('sass', function () {
 
 gulp.task('browserSync', function () {
    browserSync({
-       proxy: 'dvery.ro'
+       proxy: 'dvery.ro',
+       open: false
    });
 });
 
