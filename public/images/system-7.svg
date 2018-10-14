@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 96 144" style="enable-background:new 0 0 96 144;" xml:space="preserve">
+<polygon fill="#F95738" points="88,8 8,8 8,136 16,136 16,16 88,16 "/>
+<rect fill="#333" x="19" y="19" width="45" height="117"/>
+<g>
+	<path fill="#333" d="M86,21v113H69V21H86 M88,19H67v117h21V19L88,19z"/>
+</g>
+</svg>
