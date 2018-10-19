@@ -32,7 +32,7 @@
                     <img v-bind:src="'/public/images/doors/' + item.image" alt="">
                     <h4 class="name-door">${ item.name }</h4>
                     <p class="vendor-door">${ item.vendor }</p>
-                    <p class="color-door">цветовых решений: ${ item.color.length }</p>
+                    <p class="color-door">примеров расцветки: ${ item.example.length }</p>
                     <p class="price-door">от <span>${ item.price }</span> руб</p>
                     <div class="more-info">
                         <a href="" class="blue-but">где купить</a>

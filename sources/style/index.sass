@@ -9,6 +9,8 @@ $red: #d9001b
 
 body, h1, h2, h4, p
   font-family: 'Avenir Next Cyr'
+.uk-icon>svg:nth-child(2)
+  display: none
 .container
   max-width: 1100px
   display: flex
@@ -75,6 +77,31 @@ a.orange-but
   &:hover
     background-color: transparent
     color: $orange
+
+//Модальное окно
+.modal
+  .uk-modal-dialog
+    padding: 15px 25px
+  h2
+    font-size: 28px
+    color: $text-color
+    text-transform: uppercase
+    text-align: center
+  p
+    font-size: 18px
+  input
+    margin: 10px auto
+    display: block
+    width: 350px
+    text-transform: uppercase
+  .nav-group
+    text-align: center
+    a
+      margin: 10px 10px 0
+    a.disabled
+      opacity: 0.6
+      pointer-events: none
+      cursor: default
 
 // Первый экран
 
@@ -834,7 +861,8 @@ a.orange-but
   background-color: $grey
   padding: 25px 0
   .gallery-door, .info-door
-    width: calc(100% / 2)
+    width: calc(100% / 2 - 60px)
+    padding: 0 30px
   h1, h2
     margin: 0
     text-transform: uppercase
@@ -851,22 +879,17 @@ a.orange-but
     padding: 0
     li
       margin: 5px 0
+    li.red-item
+      text-transform: uppercase
+      color: $text-color
+      font-weight: bold
+      span
+        color: $orange
     span
       font-weight: bold
 .price-door-wrapper
   color: $text-color
   margin: 25px 0
-  span.icon
-    cursor: pointer
-    color: $orange
-    position: relative
-    top: -3px
-  .uk-dropdown
-    padding: 15px
-    color: $text-color
-  ol
-    margin: 0
-    padding-left: 16px
 .new-price-door
   font-size: 34px
   font-weight: 600
@@ -875,6 +898,47 @@ a.orange-but
   font-size: 26px
   text-decoration: line-through
   color: #666
+.image-show-gallery
+  overflow: hidden
+  position: relative
+  text-align: center
+  background-color: #fff
+  padding: 20px 10px
+  border: 1px solid $grey-black
+  img
+    height: 450px
+    width: auto
+  p.name-door
+    margin-bottom: 0
+  li
+    margin: 0
+    padding: 0
+    width: 100%
+.image-previews
+  overflow: hidden
+  padding: 0 20px
+  margin-top: 25px
+  position: relative
+  img
+    height: 100px
+    width: auto
+  ul>li
+    cursor: pointer
+    display: inline-block
+    margin: 0 20px
+    padding: 15px
+    background-color: #fff
+    text-align: center
+    border: 1px solid $grey-black
+    width: calc(100% / 2 - 72px)
+  ul>li.active-previews
+    border-color: $orange
+.uk-lightbox, .uk-lightbox-button
+  background-color: rgba(8, 44, 89, 0.8)
+.uk-lightbox-toolbar
+  background-color: rgba(8, 44, 89, 0.8)
+  font-size: 18px
+  text-transform: uppercase
 
 //стили системы слайдер
 .catalog-system-wrapper
@@ -923,3 +987,87 @@ a.orange-but
   display: flex
   flex-direction: row
   justify-content: space-between
+
+//блок аксессуары
+.door-accessory
+  position: relative
+  background-color: $blue
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    right: 0
+    top: 0
+    bottom: 0
+    background: url("/public/images/bg-accessory.jpg") 0 center no-repeat
+    background-size: cover
+    z-index: 0
+  .info-accessory
+    background-color: $blue
+    z-index: 10
+    padding: 25px 15px
+    max-width: 450px
+    color: #fff
+    font-size: 18px
+    h3
+      position: relative
+      font-size: 28px
+      text-transform: uppercase
+      font-weight: 600
+      color: #fff
+      &:before
+        content: ''
+        position: absolute
+        height: 2px
+        width: 200px
+        background-color: $yellow
+        bottom: -10px
+
+//Похожие товары
+.similar-door
+  background-color: $grey
+  padding: 25px
+  .container
+    flex-direction: column
+    padding: 10px
+  h4
+    text-transform: uppercase
+    font-size: 28px
+    margin: 20px 0 0
+    font-weight: 600
+  h5
+    display: block
+    margin: 10px 0
+    font-size: 18px
+    max-width: 650px
+    color: #666
+  .similar-list
+    li
+      padding: 15px
+      margin: 10px
+      border: 1px solid $grey-black
+      background-color: #fff
+      width: calc(100% / 4 - 52px)
+      display: inline-block
+      position: relative
+      text-align: center
+    p
+      margin: 5px 0
+      color: $text-color
+      font-size: 20px
+    p.name
+      text-transform: uppercase
+      font-weight: bold
+    p.price
+      span
+        font-weight: bold
+    img
+      height: 250px
+      width: auto
+      margin-bottom: 10px
+  .similar-nav
+    margin-top: 10px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+

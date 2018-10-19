@@ -19,7 +19,7 @@ var catalog = new Vue({
     },
     
     mounted: function () {
-        axios.get('/get-doors-site').then(response => {
+        axios.post('/get-doors-site').then(response => {
             this.doors = response.data;
             this.resetDoors = response.data.slice();
             this.paginationCount = Math.ceil(this.doors.length/this.paginationNum);

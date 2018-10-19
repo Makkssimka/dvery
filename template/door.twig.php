@@ -15,8 +15,30 @@
 
 <div class="door-page-wrapper">
     <div class="container">
-        <div class="gallery-door">
-
+        <div class="gallery-door" id="gallery-door">
+            <div class="image-show-gallery" uk-slider>
+                <ul class="uk-slider-items" uk-lightbox>
+                    {% for key, value in door.example %}
+                    <li>
+                        <a href="/public/images/doors/{{ value.img }}" data-caption="{{ value.name }}" ><img src="/public/images/doors/{{ value.img }}" alt=""></a>
+                        <p class="name-door">{{ value.name }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="uk-position-center-left uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            </div>
+            <div class="image-previews" uk-slider="sets: true">
+                <ul class="uk-slider-items">
+                    {% for key, value in door.example %}
+                    <li v-on:click="selectImage({{ key }})" v-bind:class="{ 'active-previews' : active == {{ key }} }">
+                        <img src="/public/images/doors/{{ value.img }}" alt="">
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a class="uk-position-center-left" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            </div>
         </div>
 
         <div class="info-door">
@@ -31,6 +53,7 @@
                     {% for prop, value in door.description %}
                     <li>{{ prop }}: <span>{{ value }}</span></li>
                     {% endfor %}
+                    <li class="red-item">Более <span>500 различных вариантов</span> расцветки на ваш выбор</li>
                 </ul>
             </div>
             <div class="price-door-wrapper">
@@ -40,22 +63,7 @@
                 <div class="old-price-door">
                     {{ door.oldPrice }} р.
                 </div>
-                <p>
-                    Фурнитура и наличники уже входят в базовый комплект
-                    <span class="uk-inline">
-                        <span class="icon" uk-icon="question"></span>
-                        <div uk-dropdown="mode: click; pos: top-center">
-                            В состав базового комплекта входят:
-                            <ol>
-                                <li>Полотно (Полотно 600/700/800/900*2000/2100 мм), </li>
-                                <li>Классический короб,</li>
-                                <li>Комплект гладких наличников (2*2,5шт) </li>
-                                <li>Комплект фурнитуры (карточные петли, магнитный замок с ответной планкой)</li>
-                            </ol>
-                        </div>
-                    </span>
-
-                </p>
+                <p>Цена указана за дверное полотно</p>
             </div>
             <div class="button-price">
                 <a class="orange-but" href="">Где купить</a>
@@ -64,6 +72,7 @@
     </div>
 </div>
 
+<!-- Блок системы -->
 <div class="catalog-system-wrapper">
     <div class="container">
         <h4>системы</h4>
@@ -87,6 +96,85 @@
                 <a class="orange-but" href="#">подробнее о системах</a>
             </div>
 
+        </div>
+    </div>
+</div>
+
+<!-- Блок аксессуары -->
+<div class="door-accessory">
+    <div class="container">
+        <div class="info-accessory">
+            <h3>Аксессуары<br />для дверей</h3>
+            <p>В нашем каталоге только качественная европейская фурнитура. Подберите идеальные по стилю аксессуары к вашей двери.</p>
+            <a class="yellow-but" href="#">выбрать акссесуары</a>
+        </div>
+    </div>
+</div>
+
+<!-- Блок похожие товары -->
+<div class="similar-door">
+    <div class="container">
+        <h4>Похожие двери</h4>
+        <h5>Двери которые могут быть вам также интересны</h5>
+        <div uk-slider class="similar-list">
+            <ul class="uk-slider-items">
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+                <li>
+                    <img src="/public/images/doors/viras-dub-2014.jpg" alt="">
+                    <p class="name">Вираж</p>
+                    <p class="price">от <span>24 000</span> руб.</p>
+                    <a class="blue-but-black" href="#">Смотреть</a>
+                </li>
+
+            </ul>
+            <div class="similar-nav">
+                <div class="arrows">
+                    <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a href="#" uk-slidenav-next uk-slider-item="next"></a>
+                </div>
+                <a class="orange-but" href="#">перейти в каталог</a>
+            </div>
         </div>
     </div>
 </div>

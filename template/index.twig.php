@@ -34,7 +34,7 @@
             <div class="menu-wrapper">
                 <ul>
                     <li><a href="#">каталог</a></li>
-                    <li><a class="active" href="#">заказать замер</a></li>
+                    <li><a class="active" uk-toggle="target: #call" href="#">заказать замер</a></li>
                     <li><a href="#">где купить</a></li>
                     <li><a href="#">акции</a></li>
                     <li class="desc">входные и межкомнатные двери</li>
@@ -73,7 +73,7 @@
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Где купить</a></li>
                     <li><a href="#">Акции</a></li>
-                    <li><a href="#">Вызвать замерщика</a></li>
+                    <li><a uk-toggle="target: #call" href="#">Вызвать замерщика</a></li>
                 </ul>
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Контакты</li>

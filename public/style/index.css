@@ -1,6 +1,9 @@
 body, h1, h2, h4, p {
   font-family: 'Avenir Next Cyr'; }
 
+.uk-icon > svg:nth-child(2) {
+  display: none; }
+
 .container {
   max-width: 1100px;
   display: flex;
@@ -72,6 +75,33 @@ a.orange-but {
   a.orange-but:hover {
     background-color: transparent;
     color: #F95738; }
+
+.modal .uk-modal-dialog {
+  padding: 15px 25px; }
+
+.modal h2 {
+  font-size: 28px;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center; }
+
+.modal p {
+  font-size: 18px; }
+
+.modal input {
+  margin: 10px auto;
+  display: block;
+  width: 350px;
+  text-transform: uppercase; }
+
+.modal .nav-group {
+  text-align: center; }
+  .modal .nav-group a {
+    margin: 10px 10px 0; }
+  .modal .nav-group a.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: default; }
 
 .header-wrapper {
   background-color: #083D77;
@@ -843,7 +873,8 @@ a.orange-but {
   background-color: #f4f4f4;
   padding: 25px 0; }
   .door-page-wrapper .gallery-door, .door-page-wrapper .info-door {
-    width: calc(100% / 2); }
+    width: calc(100% / 2 - 60px);
+    padding: 0 30px; }
   .door-page-wrapper h1, .door-page-wrapper h2 {
     margin: 0;
     text-transform: uppercase; }
@@ -860,23 +891,18 @@ a.orange-but {
     padding: 0; }
     .door-page-wrapper ul li {
       margin: 5px 0; }
+    .door-page-wrapper ul li.red-item {
+      text-transform: uppercase;
+      color: #333;
+      font-weight: bold; }
+      .door-page-wrapper ul li.red-item span {
+        color: #F95738; }
     .door-page-wrapper ul span {
       font-weight: bold; }
 
 .price-door-wrapper {
   color: #333;
   margin: 25px 0; }
-  .price-door-wrapper span.icon {
-    cursor: pointer;
-    color: #F95738;
-    position: relative;
-    top: -3px; }
-  .price-door-wrapper .uk-dropdown {
-    padding: 15px;
-    color: #333; }
-  .price-door-wrapper ol {
-    margin: 0;
-    padding-left: 16px; }
 
 .new-price-door {
   font-size: 34px;
@@ -887,6 +913,51 @@ a.orange-but {
   font-size: 26px;
   text-decoration: line-through;
   color: #666; }
+
+.image-show-gallery {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px 10px;
+  border: 1px solid #CDCDCD; }
+  .image-show-gallery img {
+    height: 450px;
+    width: auto; }
+  .image-show-gallery p.name-door {
+    margin-bottom: 0; }
+  .image-show-gallery li {
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+
+.image-previews {
+  overflow: hidden;
+  padding: 0 20px;
+  margin-top: 25px;
+  position: relative; }
+  .image-previews img {
+    height: 100px;
+    width: auto; }
+  .image-previews ul > li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #CDCDCD;
+    width: calc(100% / 2 - 72px); }
+  .image-previews ul > li.active-previews {
+    border-color: #F95738; }
+
+.uk-lightbox, .uk-lightbox-button {
+  background-color: rgba(8, 44, 89, 0.8); }
+
+.uk-lightbox-toolbar {
+  background-color: rgba(8, 44, 89, 0.8);
+  font-size: 18px;
+  text-transform: uppercase; }
 
 .catalog-system-wrapper {
   background-color: #f4f4f4;
@@ -936,3 +1007,82 @@ a.orange-but {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+
+.door-accessory {
+  position: relative;
+  background-color: #083D77; }
+  .door-accessory:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("/public/images/bg-accessory.jpg") 0 center no-repeat;
+    background-size: cover;
+    z-index: 0; }
+  .door-accessory .info-accessory {
+    background-color: #083D77;
+    z-index: 10;
+    padding: 25px 15px;
+    max-width: 450px;
+    color: #fff;
+    font-size: 18px; }
+    .door-accessory .info-accessory h3 {
+      position: relative;
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #fff; }
+      .door-accessory .info-accessory h3:before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 200px;
+        background-color: #F4D35E;
+        bottom: -10px; }
+
+.similar-door {
+  background-color: #f4f4f4;
+  padding: 25px; }
+  .similar-door .container {
+    flex-direction: column;
+    padding: 10px; }
+  .similar-door h4 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 20px 0 0;
+    font-weight: 600; }
+  .similar-door h5 {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    max-width: 650px;
+    color: #666; }
+  .similar-door .similar-list li {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #CDCDCD;
+    background-color: #fff;
+    width: calc(100% / 4 - 52px);
+    display: inline-block;
+    position: relative;
+    text-align: center; }
+  .similar-door .similar-list p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 20px; }
+  .similar-door .similar-list p.name {
+    text-transform: uppercase;
+    font-weight: bold; }
+  .similar-door .similar-list p.price span {
+    font-weight: bold; }
+  .similar-door .similar-list img {
+    height: 250px;
+    width: auto;
+    margin-bottom: 10px; }
+  .similar-door .similar-nav {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }

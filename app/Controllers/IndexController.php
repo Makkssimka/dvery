@@ -12,7 +12,6 @@ class IndexController
     private $menuList = [
         'home' => ['url' => '/', 'name' => 'Главная', 'active' => false],
         'catalog' => ['url' => 'catalog', 'name' => 'Каталог', 'active' => false],
-        'metering' => ['url' => 'metering', 'name' => 'Заказать замер', 'active' => false],
         'contact' => ['url' => 'contact', 'name' => 'Где купить', 'active' => false],
         'stock' => ['url' => 'stock', 'name' => 'Акции', 'active' => false]
     ];
@@ -53,12 +52,27 @@ class IndexController
             'vendor' => 'петрушкин завод',
             'price' => '57 000',
             'oldPrice' => '62 000',
-            'color' => [
-                'Венге полосатый' => 'viras-venge-2014.jpg',
-                'Дуб белый' => 'viras-dub-2014.jpg',
-                'Полисанд Рио' => 'viras-polisand-2014.jpg',
-                'Венге полосатый 2 вариант' => 'viras-venge-2-2014.jpg',
-                'Венге полосатый 3 вариант' => 'viras-venge-3-2014.jpg'
+            'example' => [
+                [
+                    'name' => 'Венге полосатый',
+                    'img' => 'viras-venge-2014.jpg'
+                ],
+                [
+                    'name' => 'Дуб белый',
+                    'img' => 'viras-dub-2014.jpg'
+                ],
+                [
+                    'name' => 'Полисанд Рио',
+                    'img' => 'viras-polisand-2014.jpg'
+                ],
+                [
+                    'name' => 'Венге полосатый 2 вариант',
+                    'img' => 'viras-venge-2-2014.jpg'
+                ],
+                [
+                    'name' => 'Венге полосатый 3 вариант',
+                    'img' => 'viras-venge-3-2014.jpg'
+                ]
             ],
             'alias' => 'petrushkin',
             'image' => 'viras-venge-2014.jpg',
@@ -81,6 +95,16 @@ class IndexController
         $data['menu'] = $this->menuList;
 
         View::view('door', $data);
+    }
 
+    public function doorSystem(Request $request){
+
+        $data['title'] = 'Системы межкомнатных дверей';
+        $data['description'] = 'Подберите наиболее подходящие по интерьеру систему межкомнатных дверей';
+        $data['scripts'] = ['main.js', 'system.js'];
+
+        $data['menu'] = $this->menuList;
+
+        View::view('system', $data);
     }
 }

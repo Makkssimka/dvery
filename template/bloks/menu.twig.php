@@ -9,6 +9,7 @@
                 {% for item in menu %}
                 <li><a class="{{ item.active?'active' }}" href="{{ item.url }}">{{ item.name }}</a></li>
                 {% endfor %}
+                <li><a href="#" uk-toggle="target: #call">заказать замер</a></li>
                 <li class="menu-but">
                     <svg v-on:click="openMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"><g transform="translate(-1002 -989)"><rect class="a" width="30" height="3" transform="translate(1002 989)"/><rect class="a" width="30" height="3" transform="translate(1002 997.421)"/><rect class="a" width="30" height="3" transform="translate(1002 1005.842)"/></g></svg>
                 </li>
@@ -40,7 +41,7 @@
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Где купить</a></li>
                     <li><a href="#">Акции</a></li>
-                    <li><a href="#">Вызвать замерщика</a></li>
+                    <li><a href="#" uk-toggle="target: #call">Вызвать замерщика</a></li>
                 </ul>
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Контакты</li>
