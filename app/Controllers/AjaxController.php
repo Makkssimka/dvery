@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Core\Request;
+use Config;
 
 class AjaxController
 {
@@ -10,7 +11,7 @@ class AjaxController
         $name = $request->input('name');
         $tel = $request->input('tel');
 
-        $to = "maxvolgstom@yandex.ru";
+        $to = Config::$email;
         $subject = "Заявка на двери";
         $message = "
             <h2>Новая заявка на двери</h2>

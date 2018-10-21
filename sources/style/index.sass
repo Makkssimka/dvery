@@ -1071,3 +1071,73 @@ a.orange-but
     flex-direction: row
     justify-content: space-between
 
+// ------ Стили для страницы системы ------ //
+.system-wrapper
+  background-color: $grey
+  .container
+    padding: 15px
+    flex-direction: column
+  .header-system
+    h1
+      text-transform: uppercase
+      font-size: 28px
+      font-weight: 600
+      span
+        color: $orange
+    img
+      width: 100%
+      height: auto
+.description-header-system
+  margin: 25px 0
+  padding-left: 30px
+  font-size: 18px
+  color: $text-color
+  border-left: 3px solid $orange
+.system-list-content
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  a
+    text-decoration: none
+  .system-list-item
+    margin: 15px
+    width: calc(100% / 4 - 30px)
+    p
+      text-transform: uppercase
+      color: $text-color
+      margin: 0
+      padding: 15px 0
+      text-align: center
+      position: relative
+  .img-wrapper
+    display: block
+    position: relative
+    z-index: 20
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      background-color: rgba(8, 44, 89, 0)
+      transition: background-color 0.5s
+    img
+      position: relative
+      z-index: 0
+    span
+      position: absolute
+      top: calc(50% - 20px)
+      left: calc(50% - 20px)
+      color: #fff
+      z-index: 50
+      opacity: 0
+      transition: opacity 0.5s
+  .system-list-item:hover
+    .img-wrapper:after
+      background-color: rgba(8, 44, 89, 0.7)
+    span
+      opacity: 1
+    p>span
+      color: $orange
+

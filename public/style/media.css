@@ -159,7 +159,9 @@
     .similar-door .similar-list li {
       width: calc(100% / 2 - 52px); }
   .similar-nav {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .system-list-content .system-list-item {
+    width: calc(100% / 3 - 30px); } }
 
 @media screen and (max-width: 500px) {
   .header-wrapper .right-block-header, .header-wrapper .left-block-header {
@@ -258,4 +260,6 @@
     flex-direction: column;
     text-align: center; }
   .similar-door a.orange-but {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  .system-list-content .system-list-item {
+    width: calc(100% / 2 - 30px); } }

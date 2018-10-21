@@ -9,5 +9,6 @@ class Config{
     static public $dbname               = 'dvery';
     static public $dbuser               = 'root';
     static public $dbpassword           = '';
+    static public $email                = 'maxvolgstom@yandex.ru';
 
 }
