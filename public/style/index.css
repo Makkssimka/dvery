@@ -1155,3 +1155,102 @@ a.orange-but {
     opacity: 1; }
   .system-list-content .system-list-item:hover p > span {
     color: #F95738; }
+
+.contact-page-wrapper {
+  background-color: #f4f4f4; }
+  .contact-page-wrapper .container {
+    padding: 15px;
+    flex-direction: column; }
+  .contact-page-wrapper h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600; }
+    .contact-page-wrapper h1 span {
+      color: #F95738; }
+  .contact-page-wrapper .contact-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .contact-page-wrapper .contact-item {
+    margin: 15px;
+    width: calc(100% / 3 - 30px); }
+    .contact-page-wrapper .contact-item h3 {
+      font-size: 20px;
+      color: #666; }
+    .contact-page-wrapper .contact-item span {
+      color: #F95738; }
+    .contact-page-wrapper .contact-item p {
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600; }
+    .contact-page-wrapper .contact-item a {
+      display: block;
+      text-decoration: none;
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      transition: color 0.3s; }
+      .contact-page-wrapper .contact-item a:hover {
+        color: #F95738; }
+
+.map-wrapper {
+  height: 550px;
+  background-color: #F4D35E; }
+
+.ip-wrapper {
+  background-color: #f4f4f4; }
+  .ip-wrapper .container {
+    padding: 15px;
+    flex-direction: column; }
+  .ip-wrapper h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px; }
+    .ip-wrapper h2 span {
+      color: #F95738; }
+
+.ip-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .ip-list .ip-list-item {
+    margin: 0 15px;
+    width: calc(100% / 3 - 30px); }
+    .ip-list .ip-list-item h3 {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 10px; }
+    .ip-list .ip-list-item p {
+      margin: 10px 0;
+      text-transform: uppercase;
+      color: #F95738;
+      font-size: 18px;
+      font-weight: 600; }
+
+.scroll-but {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  z-index: 1000;
+  flex-direction: column;
+  transition: all 0.5s; }
+  .scroll-but a {
+    padding: 5px;
+    margin: 5px 0;
+    color: #fff;
+    display: inline-block;
+    background-color: #083D77;
+    position: relative; }
+
+.scroll-visible {
+  opacity: 1;
+  visibility: visible; }

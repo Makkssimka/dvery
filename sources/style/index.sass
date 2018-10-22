@@ -1141,3 +1141,97 @@ a.orange-but
     p>span
       color: $orange
 
+// ------ Стили для страницы контакты ------ //
+.contact-page-wrapper
+  background-color: $grey
+  .container
+    padding: 15px
+    flex-direction: column
+  h1
+    text-transform: uppercase
+    font-size: 28px
+    font-weight: 600
+    span
+      color: $orange
+  .contact-list
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+  .contact-item
+    margin: 15px
+    width: calc(100% / 3 - 30px)
+    h3
+      font-size: 20px
+      color: #666
+    span
+      color: $orange
+    p
+      margin: 10px 0
+      text-transform: uppercase
+      color: $text-color
+      font-size: 18px
+      font-weight: 600
+    a
+      display: block
+      text-decoration: none
+      margin: 10px 0
+      text-transform: uppercase
+      color: $text-color
+      font-size: 18px
+      font-weight: 600
+      transition: color 0.3s
+      &:hover
+        color: $orange
+.map-wrapper
+  height: 550px
+  background-color: $yellow
+.ip-wrapper
+  background-color: $grey
+  .container
+    padding: 15px
+    flex-direction: column
+  h2
+    text-transform: uppercase
+    font-size: 28px
+    font-weight: 600
+    margin-bottom: 10px
+    span
+      color: $orange
+.ip-list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  .ip-list-item
+    margin: 0 15px
+    width: calc(100% / 3 - 30px)
+    h3
+      font-size: 20px
+      color: #666
+      margin-bottom: 10px
+    p
+      margin: 10px 0
+      text-transform: uppercase
+      color: $orange
+      font-size: 18px
+      font-weight: 600
+.scroll-but
+  display: none
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  right: 25px
+  top: 25px
+  z-index: 1000
+  flex-direction: column
+  transition: all 0.5s
+  a
+    padding: 5px
+    margin: 5px 0
+    color: #fff
+    display: inline-block
+    background-color: $blue
+    position: relative
+.scroll-visible
+  opacity: 1
+  visibility: visible

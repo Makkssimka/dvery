@@ -38,9 +38,9 @@
                 </ul>
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Компания</li>
-                    <li><a href="#">О компании</a></li>
                     <li><a href="#">Где купить</a></li>
                     <li><a href="#">Акции</a></li>
+                    <li><a href="#">Гарантийный отдел</a></li>
                     <li><a href="#" uk-toggle="target: #call">Вызвать замерщика</a></li>
                 </ul>
                 <ul class="uk-nav">

@@ -107,4 +107,15 @@ class IndexController
 
         View::view('system', $data);
     }
+
+    public  function contact(Request $request){
+        $data['title'] = 'Адреса наших магазинов межкомнатных и входных дверей';
+        $data['description'] = 'Адреса наших магазинов, где можно приобрести межкомнатные и входные двери';
+        $data['scripts'] = ['main.js', 'contact.js'];
+
+        $this->menuList['contact']['active'] = true;
+        $data['menu'] = $this->menuList;
+
+        View::view('contact', $data);
+    }
 }

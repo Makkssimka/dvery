@@ -161,7 +161,13 @@
   .similar-nav {
     margin-bottom: 15px; }
   .system-list-content .system-list-item {
-    width: calc(100% / 3 - 30px); } }
+    width: calc(100% / 3 - 30px); }
+  .contact-page-wrapper .contact-item {
+    width: calc(100% / 2 - 30px); }
+  .ip-list .ip-list-item {
+    width: calc(100% / 2 - 30px); }
+  .scroll-but {
+    display: flex; } }
 
 @media screen and (max-width: 500px) {
   .header-wrapper .right-block-header, .header-wrapper .left-block-header {
@@ -262,4 +268,8 @@
   .similar-door a.orange-but {
     margin-top: 15px; }
   .system-list-content .system-list-item {
-    width: calc(100% / 2 - 30px); } }
+    width: calc(100% / 2 - 30px); }
+  .contact-page-wrapper .contact-item {
+    width: calc(100% / 1 - 30px); }
+  .ip-list .ip-list-item {
+    width: calc(100% / 1 - 30px); } }

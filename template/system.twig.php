@@ -3,6 +3,7 @@
 {% block content %}
 
 {% include("bloks/menu.twig.php") %}
+
 <div class="breadcrumb">
     <div class="container">
         <ul class="uk-breadcrumb">
