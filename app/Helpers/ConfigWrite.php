@@ -16,6 +16,7 @@ class ConfigWrite
     private $configArray;
     private $indexName;
     private $indexDesc;
+    private $indexTimer;
 
     public function __construct()
     {
@@ -29,22 +30,27 @@ class ConfigWrite
             if(strpos($value, '$siteDescription')){
                 $this->indexDesc = $key;
             }
+            if(strpos($value, '$timer')){
+                $this->indexTimer = $key;
+            }
         }
     }
 
 
-    public function setSiteName($name)
-    {
+    public function setSiteName($name){
         $this->configArray[$this->indexName] = "    static public \$siteName             = '$name';\n";
     }
 
-    public function setSiteDesc($description)
-    {
-        $this->configArray[$this->indexDesc] = "    static public \$siteDescription      = '$description';\n";
+    public function setSiteDesc($description){
+        $this->configArray[$this->indexDesc] = "    static public \$siteDescription         = '$description';\n";
     }
 
-    public function write()
-    {
+    public function setTimer($day){
+        $time = time() + $day*24*60*60;
+        $this->configArray[$this->indexTimer] = "    static public \$timer                = '$time';\n";
+    }
+
+    public function write(){
         file_put_contents($this->pathToConfig, $this->configArray);
     }
 }

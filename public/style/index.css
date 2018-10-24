@@ -1254,3 +1254,73 @@ a.orange-but {
 .scroll-visible {
   opacity: 1;
   visibility: visible; }
+
+.stock-wrapper {
+  background-color: #f4f4f4; }
+  .stock-wrapper .container {
+    padding: 15px;
+    flex-direction: column; }
+  .stock-wrapper h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600; }
+    .stock-wrapper h1 span {
+      color: #F95738; }
+
+.stock-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .stock-list a.stock-item {
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #CDCDCD;
+    margin: 15px;
+    width: calc(100% / 2 - 32px); }
+    .stock-list a.stock-item img {
+      width: 100%;
+      height: auto; }
+    .stock-list a.stock-item p {
+      padding: 15px 15px 0;
+      margin: 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #333; }
+    .stock-list a.stock-item .stock-item-nav {
+      padding: 0 15px 15px;
+      text-align: right; }
+      .stock-list a.stock-item .stock-item-nav span {
+        display: inline-block;
+        padding: 8px 15px;
+        border: 1px solid #F95738;
+        background-color: #F95738;
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s; }
+        .stock-list a.stock-item .stock-item-nav span:hover {
+          background-color: transparent;
+          color: #F95738; }
+    .stock-list a.stock-item .counter {
+      text-align: center;
+      padding-top: 15px; }
+      .stock-list a.stock-item .counter .counter-number {
+        color: #333;
+        font-size: 35px;
+        display: inline-block;
+        padding: 3px 7px;
+        border: 2px solid #F95738;
+        border-radius: 5px; }
+      .stock-list a.stock-item .counter .uk-countdown-separator {
+        color: #333; }
+      .stock-list a.stock-item .counter p {
+        font-size: 10px;
+        color: #666; }
+
+.description-stock {
+  padding: 15px;
+  font-size: 18px;
+  color: #333; }
+  .description-stock p {
+    margin: 0 5px; }

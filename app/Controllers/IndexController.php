@@ -2,9 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Helpers\ConfigWrite;
 use Config;
 use Core\Request;
 use Core\View;
+use DateTime;
+use DateInterval;
 
 class IndexController
 {
@@ -117,5 +120,34 @@ class IndexController
         $data['menu'] = $this->menuList;
 
         View::view('contact', $data);
+    }
+
+    public function  stock(Request $request){
+        $data['title'] = 'Акции на межкомнатные и входные двери';
+        $data['description'] = 'Акции на межкомнатные и входные двери в нашем магазине';
+        $data['scripts'] = ['main.js'];
+
+        $this->menuList['stock']['active'] = true;
+        $data['menu'] = $this->menuList;
+
+        $time = time();
+        if(Config::$timer <= $time){
+            $conf = new ConfigWrite();
+            $conf->setTimer(5);
+            $conf->write();
+            $time = date($time + 5*24*60*60);
+        }
+        else{
+            $time = Config::$timer;
+        }
+
+        $data['time'][] = date('c', $time);
+        $data['time'][] = date('c', $time + 1*22*55*55);
+        $data['time'][] = date('c', $time + 2*20*50*50);
+        $data['time'][] = date('c', $time + 3*18*45*45);
+        $data['time'][] = date('c', $time + 4*16*40*40);
+        $data['time'][] = date('c', $time + 5*14*35*35);
+
+        View::view('stock', $data);
     }
 }

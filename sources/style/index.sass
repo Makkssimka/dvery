@@ -1235,3 +1235,72 @@ a.orange-but
 .scroll-visible
   opacity: 1
   visibility: visible
+
+// ------ Стили для страницы акции ------ //
+.stock-wrapper
+  background-color: $grey
+  .container
+    padding: 15px
+    flex-direction: column
+  h1
+    text-transform: uppercase
+    font-size: 28px
+    font-weight: 600
+    span
+      color: $orange
+.stock-list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  a.stock-item
+    text-decoration: none
+    background-color: #fff
+    border: 1px solid $grey-black
+    margin: 15px
+    width: calc(100% / 2 - 32px)
+    img
+      width: 100%
+      height: auto
+    p
+      padding: 15px 15px 0
+      margin: 0
+      font-size: 18px
+      text-transform: uppercase
+      color: $text-color
+    .stock-item-nav
+      padding: 0 15px 15px
+      text-align: right
+      span
+        display: inline-block
+        padding: 8px 15px
+        border: 1px solid $orange
+        background-color: $orange
+        color: #ffffff
+        font-weight: 600
+        text-decoration: none
+        text-transform: uppercase
+        transition: all 0.3s
+        &:hover
+          background-color: transparent
+          color: $orange
+    .counter
+      text-align: center
+      padding-top: 15px
+      .counter-number
+        color: $text-color
+        font-size: 35px
+        display: inline-block
+        padding: 3px 7px
+        border: 2px solid $orange
+        border-radius: 5px
+      .uk-countdown-separator
+        color: $text-color
+      p
+        font-size: 10px
+        color: #666
+.description-stock
+  padding: 15px
+  font-size: 18px
+  color: $text-color
+  p
+    margin: 0 5px

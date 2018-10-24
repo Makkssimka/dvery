@@ -1,7 +1,6 @@
 <?php
 
 class Config{
-
     static public $siteName             = 'Входные и межкомнатные двери';
     static public $siteDescription      = 'Двери хорошие и отличные';
     static public $dbdriver             = 'mysql';
@@ -10,5 +9,5 @@ class Config{
     static public $dbuser               = 'root';
     static public $dbpassword           = '';
     static public $email                = 'maxvolgstom@yandex.ru';
-
+    static public $timer                = '1540832864';
 }

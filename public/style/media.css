@@ -167,7 +167,14 @@
   .ip-list .ip-list-item {
     width: calc(100% / 2 - 30px); }
   .scroll-but {
-    display: flex; } }
+    display: flex; }
+  .stock-list a.stock-item {
+    width: calc(100% / 1 - 32px); }
+    .stock-list a.stock-item .stock-item-nav {
+      padding: 15px;
+      text-align: center; }
+    .stock-list a.stock-item .counter p {
+      padding: 10px; } }
 
 @media screen and (max-width: 500px) {
   .header-wrapper .right-block-header, .header-wrapper .left-block-header {
@@ -272,4 +279,7 @@
   .contact-page-wrapper .contact-item {
     width: calc(100% / 1 - 30px); }
   .ip-list .ip-list-item {
-    width: calc(100% / 1 - 30px); } }
+    width: calc(100% / 1 - 30px); }
+  .stock-list a.stock-item {
+    margin: 15px 0;
+    width: calc(100% / 1 - 2px); } }
