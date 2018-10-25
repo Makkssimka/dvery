@@ -6,8 +6,6 @@ use App\Helpers\ConfigWrite;
 use Config;
 use Core\Request;
 use Core\View;
-use DateTime;
-use DateInterval;
 
 class IndexController
 {
@@ -149,5 +147,15 @@ class IndexController
         $data['time'][] = date('c', $time + 5*14*35*35);
 
         View::view('stock', $data);
+    }
+
+    public function guarantee(Request $request){
+        $data['title'] = 'Гарантийный отдел';
+        $data['description'] = 'Рассмотрение гарантийных случаев по межкомнаатным и входным дверям';
+        $data['scripts'] = ['main.js', 'guarantee.js'];
+
+        $data['menu'] = $this->menuList;
+
+        View::view('guarantee', $data);
     }
 }

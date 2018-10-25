@@ -24,6 +24,14 @@ class AjaxController
         mail($to, $subject, $message, $headers);
     }
 
+    public function sendGuarantee(Request $request){
+        $name = $request->input('name');
+        $tel = $request->input('telephone');
+        $message = $request->input('message');
+
+        echo "$name $tel $message";
+    }
+
     public function getDoorsSite(Request $request){
         //if(!$request->isAjax()) die('Ошибка доступа');
 

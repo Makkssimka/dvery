@@ -1304,3 +1304,43 @@ a.orange-but
   color: $text-color
   p
     margin: 0 5px
+
+// ------ Стили для страницы отдел гарантий ------ //
+.guarantee-wrapper
+  background-color: $grey
+  min-height: calc(100vh - 398px)
+  .container
+    padding: 15px
+    flex-direction: column
+  h1
+    text-transform: uppercase
+    font-size: 28px
+    font-weight: 600
+    span
+      color: $orange
+  .guarantee-content
+    display: flex
+    flex-direction: row
+  .guarantee-description
+    width: calc(100% / 2 - 30px)
+    padding: 15px
+    margin: 15px
+    p
+      font-size: 18px
+      strong
+        font-weight: 600
+        color: $text-color
+  .guarantee-form
+    width: calc(100% / 2 - 30px)
+    margin: 15px
+    padding: 0 15px
+    .input-group
+      margin: 15px 0
+  .guarantee-form-button
+    text-align: center
+    a
+      margin: 5px
+    a.disabled
+      opacity: 0.6
+      pointer-events: none
+      cursor: default

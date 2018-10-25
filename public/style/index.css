@@ -1324,3 +1324,42 @@ a.orange-but {
   color: #333; }
   .description-stock p {
     margin: 0 5px; }
+
+.guarantee-wrapper {
+  background-color: #f4f4f4;
+  min-height: calc(100vh - 398px); }
+  .guarantee-wrapper .container {
+    padding: 15px;
+    flex-direction: column; }
+  .guarantee-wrapper h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600; }
+    .guarantee-wrapper h1 span {
+      color: #F95738; }
+  .guarantee-wrapper .guarantee-content {
+    display: flex;
+    flex-direction: row; }
+  .guarantee-wrapper .guarantee-description {
+    width: calc(100% / 2 - 30px);
+    padding: 15px;
+    margin: 15px; }
+    .guarantee-wrapper .guarantee-description p {
+      font-size: 18px; }
+      .guarantee-wrapper .guarantee-description p strong {
+        font-weight: 600;
+        color: #333; }
+  .guarantee-wrapper .guarantee-form {
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
+    padding: 0 15px; }
+    .guarantee-wrapper .guarantee-form .input-group {
+      margin: 15px 0; }
+  .guarantee-wrapper .guarantee-form-button {
+    text-align: center; }
+    .guarantee-wrapper .guarantee-form-button a {
+      margin: 5px; }
+    .guarantee-wrapper .guarantee-form-button a.disabled {
+      opacity: 0.6;
+      pointer-events: none;
+      cursor: default; }
