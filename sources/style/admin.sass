@@ -1,3 +1,18 @@
+$blue: #083D77
+$blue-hover: #071f3e
+$grey: #f4f4f4
+$grey-black: #CDCDCD
+$yellow: #F4D35E
+$orange: #F95738
+$text-color: #333
+$red: #d9001b
+
+body, h1, h2, h4, p
+  font-family: 'Avenir Next Cyr'
+.uk-icon>svg:nth-child(2)
+  display: none
+.uk-icon>svg:nth-child(3)
+  display: none
 .login-wrapper
   height: 100vh
   display: flex
@@ -112,3 +127,57 @@
   padding: 15px
   box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04)
   display: flex
+
+//модальное окно
+.modal-add
+  background-color: #fff
+.list-param
+  margin: 10px 20px
+  width: calc(100%/3 - 40px)
+  .param-item
+    margin: 15px 0
+  p
+    margin-bottom: 10px
+  label
+    display: block
+  .list-check
+    label
+      display: inline-block
+      margin-right: 15px
+    .uk-checkbox, .uk-radio
+      margin-right: 10px
+  .uk-checkbox, .uk-radio
+    padding: 10px
+    margin-right: 15px
+.param-wrapper
+  display: flex
+  flex-direction: row
+.but-param-wrapper
+  text-align: right
+.desc-row
+  margin-bottom: 10px
+  position: relative
+  a
+    position: absolute
+    top: 0
+    right: 0
+    &:hover
+      color: $red
+
+//Список элементов
+a.option-but-edit
+  color: $blue
+  margin: 0 2px
+a.option-but-remove
+  color: $red
+  margin: 0 2px
+a.option-but-info
+  color: $orange
+  margin: 0 2px
+.colors-item
+  span
+    padding: 10px
+    display: inline-block
+.uk-table-striped tbody tr:nth-of-type(odd), .uk-table-striped>tr:nth-of-type(odd)
+  background-color: #f2f2f2
+

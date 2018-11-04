@@ -18,9 +18,9 @@ var guarantee = new Vue({
                 data.append('telephone', this.telephone);
                 data.append('message', this.message);
                 axios.post('/send-guarantee', data).then(response => {
-                    console.log(response.data);
+                    this.name = this.telephone = this.message = '';
+                    this.shipped = true;
                 });
-
             }
         },
         clear: function () {

@@ -19,10 +19,10 @@
         <div class="gallery-door" id="gallery-door">
             <div class="image-show-gallery" uk-slider>
                 <ul class="uk-slider-items" uk-lightbox>
-                    {% for key, value in door.example %}
+                    {% for item in images %}
                     <li>
-                        <a href="/public/images/doors/{{ value.img }}" data-caption="{{ value.name }}" ><img src="/public/images/doors/{{ value.img }}" alt=""></a>
-                        <p class="name-door">{{ value.name }}</p>
+                        <a href="/public/images/doors/images/{{ item.name }}" data-caption="{{ item.desc }}" ><img src="/public/images/doors/images/{{ item.name }}" alt=""></a>
+                        <p class="name-door">{{ item.desc }}</p>
                     </li>
                     {% endfor %}
                 </ul>
@@ -31,9 +31,9 @@
             </div>
             <div class="image-previews" uk-slider="sets: true">
                 <ul class="uk-slider-items">
-                    {% for key, value in door.example %}
+                    {% for key, item in images %}
                     <li v-on:click="selectImage({{ key }})" v-bind:class="{ 'active-previews' : active == {{ key }} }">
-                        <img src="/public/images/doors/{{ value.img }}" alt="">
+                        <img src="/public/images/doors/images/{{ item.name }}" alt="">
                     </li>
                     {% endfor %}
                 </ul>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="info-door">
-            {% if(door.doorType == 'interior') %}
+            {% if(door.category == 'interior') %}
             <h2>Межкомнатная дверь</h2>
             {% else %}
             <h2>Входная дверь</h2>
@@ -51,18 +51,18 @@
             <h1>{{ door.name }}</h1>
             <div class="description-door">
                 <ul>
-                    {% for prop, value in door.description %}
-                    <li>{{ prop }}: <span>{{ value }}</span></li>
+                    {% for item in desc %}
+                    <li>{{ item.name }}: <span>{{ item.value }}</span></li>
                     {% endfor %}
                     <li class="red-item">Более <span>500 различных вариантов</span> расцветки на ваш выбор</li>
                 </ul>
             </div>
             <div class="price-door-wrapper">
                 <div class="new-price-door">
-                    {{ door.price }} р.
+                    {{ door.newprice }} р.
                 </div>
                 <div class="old-price-door">
-                    {{ door.oldPrice }} р.
+                    {{ door.oldprice }} р.
                 </div>
                 <p>Цена указана за дверное полотно</p>
             </div>

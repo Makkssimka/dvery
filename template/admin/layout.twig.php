@@ -8,28 +8,28 @@
     <meta name="description" content="{{ description }}">
     <title>{{ title }}</title>
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/css/uikit.min.css" />
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="/public/style/uikit.min.css">
+    <link rel="stylesheet" href="/public/style/fonts.css">
     <link rel="stylesheet" href="/public/style/admin.css">
 </head>
 <body>
 
-<div class="content-wrapper" id="content">
+<div class="content-wrapper">
     <div class="header">
         <div class="logo-header">
             <img src="/public/images/logo.png" alt="">
         </div>
         <div class="logout-wrapper">
-            <a href="/admin/logout"><span class="lnr lnr-exit-up"></span></a>
+            <a href="/admin/logout"><span uk-icon="icon: sign-out; ratio: 1.5"></span></a>
         </div>
         <div class="menu-collapse">
-            <a v-on:click="collapseStatus" href=""><span class="lnr lnr-menu"></span></a>
+            <a href="#"><span uk-icon="icon: menu; ratio: 1.5"></span></a>
         </div>
     </div>
 
     {% include("admin/bloks/menu.twig.php") %}
 
-    <div class="content" v-bind:class="{ collapseContent: isCollapse }">
+    <div class="content">
         {% block content %}{% endblock %}
     </div>
 </div>
@@ -38,8 +38,10 @@
 </body>
 
 <!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit.min.js"></script>
+<script src="/public/scripts/vue.min.js"></script>
+<script src="/public/scripts/axios.min.js"></script>
+<script src="/public/scripts/site/uikit.min.js"></script>
+<script src="/public/scripts/site/uikit-icons.min.js"></script>
 <script src="/public/scripts/admin/content.js"></script>
 {% for script in scripts %}
 <script src="/public/scripts/admin/{{ script }}"></script>

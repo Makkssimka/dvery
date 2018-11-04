@@ -17,7 +17,7 @@
     <div class="container">
         <h1><span>Отдел гарантий</span> входных и межкомнатных дверей</h1>
         <div class="guarantee-content">
-            <div class="guarantee-form">
+            <div class="guarantee-form" v-bind:class="{ 'invisible-form': shipped }">
                 <div class="input-group">
                     <input class="uk-input" v-bind:class="{ 'uk-form-success': nameOk }" type="text" v-model="name" placeholder="введите имя">
                 </div>
@@ -28,13 +28,19 @@
                     <textarea class="uk-textarea" v-bind:class="{ 'uk-form-success': messageOk }" rows="5" v-model="message" placeholder="введите сообщение"></textarea>
                 </div>
             </div>
+            <div class="guarantee-form invisible-form" v-bind:class="{ 'visible-form': shipped }">
+                <div class="message-wrapper">
+                    <img src="/public/images/message.svg" alt="">
+                    <p>Сообщение отправлено. В течение трех дней с вами обязательно свяжутся!</p>
+                </div>
+            </div>
             <div class="guarantee-description">
                 <p>На данной странице Вы можете обратиться с вопросом по <strong>гарантийным случаям</strong> при эксплуатации установленных фирмой ВИПСЕРВИС <strong>входных и межкомнатных дверей.</strong> Все обращения рассматриваются в течении 3 рабочих дней с момента подачи обращения.</p> <p>Заполните поля и нажмите кнопку отправить. <strong>Все поля обязательны к заполнению</strong></p>
             </div>
         </div>
         <div class="guarantee-form-button">
             <a href="#" class="blue-but-black" v-bind:class="{ disabled: !sendOk }" v-on:click.prevent="send">Отправить</a>
-            <a href="#" class="orange-but" v-on:click.prevent="clear">Очистить форму</a>
+            <a href="#" class="orange-but" v-bind:class="{ disabled: shipped }" v-on:click.prevent="clear">Очистить форму</a>
         </div>
     </div>
 </div>

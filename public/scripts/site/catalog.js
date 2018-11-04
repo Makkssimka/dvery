@@ -21,13 +21,18 @@ var catalog = new Vue({
     mounted: function () {
         axios.post('/get-doors-site').then(response => {
             this.doors = response.data;
+            console.log(this.doors);
             this.resetDoors = response.data.slice();
             this.paginationCount = Math.ceil(this.doors.length/this.paginationNum);
             this.resultDoors = this.doors.slice(this.paginationPosition,  this.paginationPosition + this.paginationNum);
+
+            var urlGet = getRequest();
+            if(urlGet.type) this.doorType.push(urlGet.type);
+            if(urlGet.vendor) this.vendor.push(decodeURI(urlGet.vendor));
+
+            this.filter();
         });
     },
-
-    updated: function(){},
 
     methods: {
         pagination: function (pos) {
@@ -99,4 +104,17 @@ function sortPriceDesc(a,b){
 function getCoords(elem) {
     var box = elem.getBoundingClientRect();
     return box.top + pageYOffset;
+}
+
+function getRequest() {
+    var url = window.location.search.replace('?','');
+    var paramArray = url.split('&');
+    var param = [];
+
+    paramArray.forEach(function (value) {
+        var vl = value.split('=');
+        param[vl[0]] = vl[1];
+    });
+
+    return param;
 }

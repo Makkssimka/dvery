@@ -20,6 +20,7 @@ class Route
         $controller = '';
         $method = '';
 
+
         if(!$url) {
             $controller = 'App\Controllers\indexController';
             $method = 'index';

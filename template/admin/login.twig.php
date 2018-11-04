@@ -1,6 +1,19 @@
-{% extends "admin/layout.twig.php" %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }}</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="/public/style/uikit.min.css">
+    <link rel="stylesheet" href="/public/style/fonts.css">
+    <link rel="stylesheet" href="/public/style/admin.css">
+</head>
+<body>
 
-{% block content %}
 {% if error == true %}
 <div class="uk-alert-danger alert" uk-alert>
     <a class="uk-alert-close" uk-close></a>
@@ -21,4 +34,7 @@
         </form>
     </div>
 </div>
-{% endblock %}
+
+</body>
+<script src="/public/scripts/site/uikit.min.js"></script>
+</html>

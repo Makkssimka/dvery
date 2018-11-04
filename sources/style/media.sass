@@ -228,6 +228,23 @@
       .counter p
         padding: 10px
 
+  // ------ Стили для страницы аксессуары ------ //
+  .aces-header
+    display: flex
+    flex-direction: column
+  .aces-header-img
+    margin: 0
+    width: 100%
+  .aces-header-desc
+    margin: 0
+    width: calc(100% - 30px)
+  .handle-list
+    .handle-item
+      width: calc(100% / 3 - 52px)
+  .furniture-wrapper
+    .handle-item
+      width: calc(100% / 2 - 52px)
+
 @media screen and (max-width: 500px)
   .header-wrapper
     .right-block-header, .left-block-header
@@ -373,3 +390,29 @@
     a.stock-item
       margin: 15px 0
       width: calc(100% / 1 - 2px)
+
+  // ------ Стили для страницы отдел гарантий ------ //
+  .guarantee-wrapper
+    .guarantee-content
+      display: flex
+      flex-direction: column-reverse
+    .guarantee-description
+      width: calc(100%)
+      padding: 0
+      margin: 0
+    .guarantee-form
+      width: calc(100%)
+      padding: 0
+      margin: 0
+    .aces-header-img, .aces-header-desc
+      margin: 10px
+      width: calc(100% - 20px)
+      img
+        width: 100%
+        height: auto
+
+  // ------ Стили для страницы аксессуары ------ //
+  .handle-list
+    .handle-item
+      width: calc(100% - 52px)
+

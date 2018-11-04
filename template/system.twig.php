@@ -48,7 +48,7 @@
                 <a href="/public/images/system/system-3.jpg" data-caption=" Раздвижная дверь в пенал">
                     <span class="img-wrapper">
                         <img src="/public/images/system/system-3.jpg" alt=" Раздвижная дверь в пенал">
-                        <span uk-icon="icon: search; ratio: 3"></span>
+                        <span uk-icon="icon: search; ratio: 2"></span>
                     </span>
                     <p><span> Раздвижная дверь</span> в пенал</p>
 

@@ -1,3 +1,12 @@
+body, h1, h2, h4, p {
+  font-family: 'Avenir Next Cyr'; }
+
+.uk-icon > svg:nth-child(2) {
+  display: none; }
+
+.uk-icon > svg:nth-child(3) {
+  display: none; }
+
 .login-wrapper {
   height: 100vh;
   display: flex;
@@ -116,3 +125,60 @@
   padding: 15px;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
   display: flex; }
+
+.modal-add {
+  background-color: #fff; }
+
+.list-param {
+  margin: 10px 20px;
+  width: calc(100%/3 - 40px); }
+  .list-param .param-item {
+    margin: 15px 0; }
+  .list-param p {
+    margin-bottom: 10px; }
+  .list-param label {
+    display: block; }
+  .list-param .list-check label {
+    display: inline-block;
+    margin-right: 15px; }
+  .list-param .list-check .uk-checkbox, .list-param .list-check .uk-radio {
+    margin-right: 10px; }
+  .list-param .uk-checkbox, .list-param .uk-radio {
+    padding: 10px;
+    margin-right: 15px; }
+
+.param-wrapper {
+  display: flex;
+  flex-direction: row; }
+
+.but-param-wrapper {
+  text-align: right; }
+
+.desc-row {
+  margin-bottom: 10px;
+  position: relative; }
+  .desc-row a {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .desc-row a:hover {
+      color: #d9001b; }
+
+a.option-but-edit {
+  color: #083D77;
+  margin: 0 2px; }
+
+a.option-but-remove {
+  color: #d9001b;
+  margin: 0 2px; }
+
+a.option-but-info {
+  color: #F95738;
+  margin: 0 2px; }
+
+.colors-item span {
+  padding: 10px;
+  display: inline-block; }
+
+.uk-table-striped tbody tr:nth-of-type(odd), .uk-table-striped > tr:nth-of-type(odd) {
+  background-color: #f2f2f2; }

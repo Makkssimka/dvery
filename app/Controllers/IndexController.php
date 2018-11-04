@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Helpers\ConfigWrite;
+use App\Models\Accessory;
+use App\Models\Door;
 use Config;
 use Core\Request;
 use Core\View;
@@ -32,6 +34,9 @@ class IndexController
 
     public function catalog(Request $request){
 
+        $type = $request->input('type');
+        $data['type'] = $type;
+
         $data['title'] = 'Каталог межкомнатных дверей и входных дверей';
         $data['description'] = 'Подбирите межкомнатную или входную дверь используя удобные фильтры';
         $data['scripts'] = ['main.js','catalog.js'];
@@ -45,53 +50,27 @@ class IndexController
 
     public function door(Request $request){
 
-        $data['door'] = [
-            'id' => 1,
-            'colorType'=>'black',
-            'doorType'=> 'interior',
-            'name' => 'Вираж',
-            'vendor' => 'петрушкин завод',
-            'price' => '57 000',
-            'oldPrice' => '62 000',
-            'example' => [
-                [
-                    'name' => 'Венге полосатый',
-                    'img' => 'viras-venge-2014.jpg'
-                ],
-                [
-                    'name' => 'Дуб белый',
-                    'img' => 'viras-dub-2014.jpg'
-                ],
-                [
-                    'name' => 'Полисанд Рио',
-                    'img' => 'viras-polisand-2014.jpg'
-                ],
-                [
-                    'name' => 'Венге полосатый 2 вариант',
-                    'img' => 'viras-venge-2-2014.jpg'
-                ],
-                [
-                    'name' => 'Венге полосатый 3 вариант',
-                    'img' => 'viras-venge-3-2014.jpg'
-                ]
-            ],
-            'alias' => 'petrushkin',
-            'image' => 'viras-venge-2014.jpg',
-            'description' => [
-                'Размер' => '600, 700, 800, 900 x 2000 мм',
-                'Покрытие' => 'ЭКОшпон',
-                'Материал' => 'Сосновый брус',
-                'Остекление' => 'Матовое стекло',
-                'Наличник' => 'Телескопический',
-                'Открывание' => 'Универсальное'
-            ]
-        ];
+        $id = $request->input('id');
+        if(!is_numeric($id)){
+            $error = new ErrorController();
+            $error->pageNoFound();
+            exit();
+        }
 
-        $doorType = ($data['door']['doorType'] == 'interior')?'межкомнатная ':'входная ';
-        $data['title'] = 'Дверь '.$doorType.$data['door']['name'];
-        $data['description'] = 'Дверь '.$doorType.$data['door']['name'];
+
+        $door = Door::find($id);
+
+        $data['desc'] = json_decode($door->description);
+        $data['images'] = json_decode($door->images);
+
+        $data['door'] = $door;
+        $doorType = ($door->category == 'interior')?'межкомнатная ':'входная ';
+        $data['title'] = 'Дверь '.$doorType.$door->name;
+        $data['description'] = 'Дверь '.$doorType.$door->name;
         $data['scripts'] = ['main.js','door.js'];
 
+        ++$door->views;
+        $door->save();
 
         $data['menu'] = $this->menuList;
 
@@ -157,5 +136,47 @@ class IndexController
         $data['menu'] = $this->menuList;
 
         View::view('guarantee', $data);
+    }
+
+    public function accessories(Request $request){
+        $data['title'] = 'Аксессуары для дверей';
+        $data['description'] = 'Подбирите подходящие аксессуары для межкомнатных и входных дверерй';
+        $data['scripts'] = ['main.js'];
+
+        $data['menu'] = $this->menuList;
+        $data['handles'] = $this->colorWrite(Accessory::all());
+
+        View::view('accessories', $data);
+    }
+
+    private function colorWrite($access){
+        foreach ($access as $item){
+            $colors = explode(',', $item->color);
+            $colorsList = [];
+            foreach ($colors as $color){
+                switch ($color){
+                    case 'mz':
+                        $colorsList['Матовое золото'] = '#f5d78e';
+                        break;
+                    case 'pz':
+                        $colorsList['Полированное золото'] = '#f7ca65';
+                        break;
+                    case 'mh':
+                        $colorsList['Матовый хром'] = '#a4a4ac';
+                        break;
+                    case 'ph':
+                        $colorsList['Полированный хром'] = '#e1e5e8';
+                        break;
+                    case 'mb':
+                        $colorsList['Матовая бронза'] = '#a47a52';
+                        break;
+                    case 'be':
+                        $colorsList['Белая эмаль'] = '#e2e2e2';
+                        break;
+                }
+            }
+            $item->colors = $colorsList;
+        }
+        return $access;
     }
 }

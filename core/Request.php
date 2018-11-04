@@ -25,18 +25,23 @@ class Request
         return $result;
     }
 
-    public function input($name, $name_default = null){
+    public function input($name, $clean = true, $name_default = null){
+        $result = $name_default;
+
         if($_POST[$name]){
-            $result = $this->clean($_POST[$name]);
-            return $result;
+            $result = $_POST[$name];
         }
 
         if($_GET[$name]) {
-            $result = $this->clean($_GET[$name]);
+            $result = $_GET[$name];
+        }
+
+        if($_FILES[$name]) {
+            $result = $_FILES[$name];
             return $result;
         }
 
-        return $name_default;
+        return $clean?$this->clean($result):$result;
     }
 
     public function isAjax(){

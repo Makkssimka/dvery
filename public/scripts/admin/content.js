@@ -1,14 +1,18 @@
-var app = new Vue({
-    el: '#content',
-    data: {
-        isCollapse: false
-    },
+var menuCol = document.querySelector('.menu-collapse');
+var menu = document.querySelector('.menu-wrapper');
+var content = document.querySelector('.content');
+var collapse = false;
 
-    methods: {
-        collapseStatus: function (e) {
-            e.preventDefault();
-            this.isCollapse = this.isCollapse?false:true;
-        }
+menuCol.addEventListener('click', function (e) {
+    e.preventDefault();
+    if(collapse){
+        menu.classList.remove('collapse');
+        content.classList.remove('collapseContent');
+        collapse = false;
     }
-
+    else{
+        menu.classList.add('collapse');
+        content.classList.add('collapseContent');
+        collapse = true;
+    }
 });

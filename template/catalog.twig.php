@@ -29,14 +29,14 @@
         <template v-if="resultDoors.length">
             <transition-group name="list" class="catalog-content" tag="div">
                 <div v-for="(item, index) in resultDoors" v-bind:key="item.id" class="cat-item-door">
-                    <img v-bind:src="'/public/images/doors/' + item.image" alt="">
+                    <img v-bind:src="'/public/images/doors/previews/' + item.preview" alt="">
                     <h4 class="name-door">${ item.name }</h4>
                     <p class="vendor-door">${ item.vendor }</p>
-                    <p class="color-door">примеров расцветки: ${ item.example.length }</p>
-                    <p class="price-door">от <span>${ item.price }</span> руб</p>
+                    <p class="color-door">примеров расцветки: ${ JSON.parse(item.images).length }</p>
+                    <p class="price-door">от <span>${ item.newprice }</span> руб</p>
                     <div class="more-info">
-                        <a href="" class="blue-but">где купить</a>
-                        <a href="" class="more orange-but">подробнее</a>
+                        <a href="/contact" target="_blank" class="blue-but">купить</a>
+                        <a v-bind:href="'/door?id=' + item.id" target="_blank" class="more orange-but">подробнее</a>
                     </div>
                 </div>
             </transition-group>
@@ -118,7 +118,7 @@
             </div>
             <div class="filter-button">
                 <a href="#list" v-on:click="filter" uk-scroll class="submit blue-but">применить</a>
-                <a href="#" v-on:click="clear" class="reset red-but">очистить</a>
+                <a href="#list" v-on:click="clear" uk-scroll class="reset red-but">очистить</a>
             </div>
         </div>
 

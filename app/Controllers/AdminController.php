@@ -11,21 +11,21 @@ use Core\View;
 class AdminController
 {
     private $menuList = [
-        'category' => [
-            'name'  => 'Категории',
-            'icon'  => 'lnr-layers',
+        'accessories' => [
+            'name'  => 'Аксессуары',
+            'icon'  => 'tag',
             'url'  => '/admin/index',
             'active' => false
         ],
-        'list' => [
+        'doors' => [
             'name' => 'Каталог',
-            'icon' => 'lnr-picture',
-            'url'  => '/admin/list',
+            'icon' => 'image',
+            'url'  => '/admin/doors-list',
             'active' => false
         ],
         'setting' => [
             'name' => 'Настройки',
-            'icon' => 'lnr-cog',
+            'icon' => 'cog',
             'url'  => '/admin/setting',
             'active' => false
         ],
@@ -57,14 +57,27 @@ class AdminController
     public function index(Request $request){
         if(!$request->getSession('isKey')) $request->redirect('/admin');
 
-        $data['title'] =  "Список категорий";
-        $data['description'] = "Список категорий";
+        $data['title'] =  "Список аксессуаров";
+        $data['description'] = "Список аксессуаров";
         $data['scripts'] = ['index.js'];
 
-        $this->menuList['category']['active'] = true;
+        $this->menuList['accessories']['active'] = true;
         $data['menu'] = $this->menuList;
 
         View::view('admin/index', $data);
+    }
+
+    public function doorsList(Request $request){
+        if(!$request->getSession('isKey')) $request->redirect('/admin');
+
+        $data['title'] =  "Список дверей";
+        $data['description'] = "Список дверей";
+        $data['scripts'] = ['doors.js'];
+
+        $this->menuList['doors']['active'] = true;
+        $data['menu'] = $this->menuList;
+
+        View::view('admin/doors', $data);
     }
 
     public function setting(Request $request){

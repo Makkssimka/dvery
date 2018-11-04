@@ -3,7 +3,7 @@
         {% for item in menu %}
         <li>
             <a class="{{ item.active?'active-menu' }}" href="{{ item.url }}">
-                <span class="lnr {{ item.icon }}"></span>
+                <span uk-icon="icon: {{ item.icon }}; ratio: 2.5"></span>
                 <div class="desc-menu">{{ item.name }}</div>
             </a>
         </li>

@@ -9,5 +9,5 @@ class Config{
     static public $dbuser               = 'root';
     static public $dbpassword           = '';
     static public $email                = 'maxvolgstom@yandex.ru';
-    static public $timer                = '1540832864';
+    static public $timer                = '1541693647';
 }

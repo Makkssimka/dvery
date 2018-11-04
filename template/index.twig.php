@@ -33,10 +33,10 @@
         <div class="right-block-header">
             <div class="menu-wrapper">
                 <ul>
-                    <li><a href="#">каталог</a></li>
+                    <li><a href="/catalog">каталог</a></li>
                     <li><a class="active" uk-toggle="target: #call" href="#">заказать замер</a></li>
-                    <li><a href="#">где купить</a></li>
-                    <li><a href="#">акции</a></li>
+                    <li><a href="/contact">где купить</a></li>
+                    <li><a href="/stock">акции</a></li>
                     <li class="desc">входные и межкомнатные двери</li>
                     <li class="menu-but">
                         <svg v-on:click="openMenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20"><g transform="translate(-1002 -989)"><rect class="a" width="30" height="3" transform="translate(1002 989)"/><rect class="a" width="30" height="3" transform="translate(1002 997.421)"/><rect class="a" width="30" height="3" transform="translate(1002 1005.842)"/></g></svg>
@@ -62,23 +62,24 @@
             <nav class="menu-list">
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Двери</li>
+                    <li><a href="/">Главная</a></li>
                     <li><a href="#">Входные</a></li>
                     <li><a href="#">Межкомнатные</a></li>
-                    <li><a href="#">Аксессуары</a></li>
-                    <li><a href="#">Системы</a></li>
-                    <li><a href="#">Каталог дверей</a></li>
+                    <li><a href="/accessories">Аксессуары</a></li>
+                    <li><a href="/system-door">Системы</a></li>
+                    <li><a href="/catalog">Каталог дверей</a></li>
                 </ul>
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Компания</li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Где купить</a></li>
-                    <li><a href="#">Акции</a></li>
-                    <li><a uk-toggle="target: #call" href="#">Вызвать замерщика</a></li>
+                    <li><a href="/contact">Где купить</a></li>
+                    <li><a href="/stock">Акции</a></li>
+                    <li><a href="/guarantee">Гарантийный отдел</a></li>
+                    <li><a href="#" uk-toggle="target: #call">Вызвать замерщика</a></li>
                 </ul>
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Контакты</li>
                     <li><a href="tel:8 (8442) 50-69-69">8 (8442) 50-69-69</a></li>
-                    <li><a href="#">Университетский пр-т, д.74</a></li>
+                    <li><a href="/contact">Университетский пр-т, д.74</a></li>
                 </ul>
             </nav>
 
@@ -91,18 +92,18 @@
     <div class="container">
         <div class="section section-1">
             <h3>Межкомнатные двери</h3>
-            <a href="#">Выбрать</a>
+            <a href="/catalog?type=interior">Выбрать</a>
         </div>
         <div class="section topic">
             <h2><span>что</span><br /> вас<br /> интересует</h2>
         </div>
         <div class="section section-2">
             <h3>Аксессуары и системы</h3>
-            <a href="#">Выбрать</a>
+            <a href="/accessories">Выбрать</a>
         </div>
         <div class="section section-3">
             <h3>Входные двери</h3>
-            <a href="#">Выбрать</a>
+            <a href="/catalog?type=entry">Выбрать</a>
         </div>
     </div>
 </div>
@@ -113,7 +114,7 @@
         <div class="all-select">
             <h3>Безграничный <br/> выбор дверей</h3>
             <p>Классика или минимализм, массив или современные отделки, подберите свою идеальную дверь.</p>
-            <a href="#" class="yellow-but">Перйти в каталог</a>
+            <a href="/catalog" class="yellow-but">Перйти в каталог</a>
         </div>
     </div>
 </div>
@@ -125,11 +126,11 @@
             <h2><span>Межкомнатные<br/> двери</span><br/> производители</h2>
         </div>
         <div class="door-section-h door-mk-1">
-            <h3>Название производителя</h3>
+            <h3>петрушкин завод</h3>
             <div class="door-desc">
                 <div class="door-desc-wrapper">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
+                    <a href="/catalog?type=interior&vendor=петрушкин завод" class="yellow-but">выбрать дверь</a>
                 </div>
             </div>
         </div>
@@ -321,7 +322,7 @@
         <div class="index-map">
             <h3>Фирменные <br /> салоны</h3>
             <p>Познакомьтесь с широким выбром дверей ВИПСЕРВИС в атмосфере внимания и профессиональных знаний</p>
-            <a href="#" class="yellow-but">Посмотреть на карте</a>
+            <a href="/contact" class="yellow-but">Посмотреть на карте</a>
         </div>
     </div>
     <div class="map-position">
