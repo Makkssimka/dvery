@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="{{ description }}">
     <title>{{ title }}</title>
+    <link rel="icon" href="/public/images/favicon.png" type="image/png">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="/public/style/uikit.min.css">
     <link rel="stylesheet" href="/public/style/fonts.css">

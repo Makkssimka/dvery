@@ -8,6 +8,7 @@ Route::get('/admin/doors-list', 'AdminController@doorsList');
 Route::get('/admin/setting', 'AdminController@setting');
 Route::get('/admin/logout', 'AdminController@logout');
 
+Route::get('', 'IndexController@index');
 Route::get('/catalog', 'IndexController@catalog');
 Route::get('/door', 'IndexController@door');
 Route::get('/system-door', 'IndexController@doorSystem');

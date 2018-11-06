@@ -74,23 +74,18 @@
                 <div class="filter-wrapper">
                     <p>Производители</p>
                     <div class="group-filter">
-                        <label for="petr">петрушкин завод</label>
-                        <input type="checkbox" value="петрушкин завод" id="petr" v-model="vendor">
+                        <label for="geona">геона</label>
+                        <input type="checkbox" value="Геона" id="geona" v-model="vendor">
                         <span class="check-custom"></span>
                     </div>
                     <div class="group-filter">
-                        <label for="ivan">иванов завод</label>
-                        <input type="checkbox" value="иванов завод" id="ivan" v-model="vendor">
+                        <label for="varador">варадор</label>
+                        <input type="checkbox" value="Варадор" id="varador" v-model="vendor">
                         <span class="check-custom"></span>
                     </div>
                     <div class="group-filter">
-                        <label for="sidr">сидоров завод</label>
-                        <input type="checkbox" value="сидоров завод" id="sidr" v-model="vendor">
-                        <span class="check-custom"></span>
-                    </div>
-                    <div class="group-filter">
-                        <label for="sosn">сосновый завод</label>
-                        <input type="checkbox" value="сосновый завод" id="sosn" v-model="vendor">
+                        <label for="intecron">интекрон</label>
+                        <input type="checkbox" value="Интекрон" id="intecron" v-model="vendor">
                         <span class="check-custom"></span>
                     </div>
                 </div>

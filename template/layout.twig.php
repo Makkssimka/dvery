@@ -12,6 +12,7 @@
     <meta property="og:image" content="/public/images/og-image.png">
 
     <title>{{ title }}</title>
+    <link rel="icon" href="/public/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="/public/style/uikit.min.css">
     <link rel="stylesheet" href="/public/style/fonts.css">
     <link rel="stylesheet" href="/public/style/index.css">

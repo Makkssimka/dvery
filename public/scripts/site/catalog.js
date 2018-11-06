@@ -53,11 +53,11 @@ var catalog = new Vue({
             var dt, vd, ct, prFrom, prTo;
             var doorType = this.doorType, vendor = this.vendor, colorType = this.colorType, priceFrom = this.priceFrom, priceTo = this.priceTo;
             this.doors = this.resetDoors.filter(function (elem) {
-                dt = doorType.length ? (doorType.indexOf(elem.doorType) != -1) : true;
+                dt = doorType.length ? (doorType.indexOf(elem.category) != -1) : true;
                 vd = vendor.length ? (vendor.indexOf(elem.vendor) != -1) : true;
                 ct = colorType.length ? (colorType.indexOf(elem.colorType) != -1) : true;
-                prFrom = priceFrom ? (parseInt(elem.price.replace(' ', '')) >=  priceFrom) : true;
-                prTo = priceTo ? (parseInt(elem.price.replace(' ', '')) <= priceTo): true;
+                prFrom = priceFrom ? (parseInt(elem.newprice.replace(' ', '')) >=  priceFrom) : true;
+                prTo = priceTo ? (parseInt(elem.newprice.replace(' ', '')) <= priceTo): true;
                 return dt && vd && ct && prFrom && prTo;
             });
 
@@ -90,20 +90,15 @@ var catalog = new Vue({
 });
 
 function sortPriceAsc(a,b){
-    if (parseInt(a.price) > parseInt(b.price)) return 1;
-    if (parseInt(a.price) < parseInt(b.price)) return -1;
+    if (parseInt(a.newprice) > parseInt(b.newprice)) return 1;
+    if (parseInt(a.newprice) < parseInt(b.newprice)) return -1;
     return 0;
 }
 
 function sortPriceDesc(a,b){
-    if (parseInt(a.price) < parseInt(b.price)) return 1;
-    if (parseInt(a.price) > parseInt(b.price)) return -1;
+    if (parseInt(a.newprice) < parseInt(b.newprice)) return 1;
+    if (parseInt(a.newprice) > parseInt(b.newprice)) return -1;
     return 0;
-}
-
-function getCoords(elem) {
-    var box = elem.getBoundingClientRect();
-    return box.top + pageYOffset;
 }
 
 function getRequest() {

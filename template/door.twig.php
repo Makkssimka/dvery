@@ -94,7 +94,7 @@
                     <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a href="#" uk-slidenav-next uk-slider-item="next"></a>
                 </div>
-                <a class="orange-but" href="#">подробнее о системах</a>
+                <a class="orange-but" href="/system-door">подробнее о системах</a>
             </div>
 
         </div>
@@ -107,7 +107,7 @@
         <div class="info-accessory">
             <h3>Аксессуары<br />для дверей</h3>
             <p>В нашем каталоге только качественная европейская фурнитура. Подберите идеальные по стилю аксессуары к вашей двери.</p>
-            <a class="yellow-but" href="#">выбрать акссесуары</a>
+            <a class="yellow-but" href="/accessories">выбрать акссесуары</a>
         </div>
     </div>
 </div>
@@ -174,7 +174,7 @@
                     <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a href="#" uk-slidenav-next uk-slider-item="next"></a>
                 </div>
-                <a class="orange-but" href="#">перейти в каталог</a>
+                <a class="orange-but" href="/catalog">перейти в каталог</a>
             </div>
         </div>
     </div>

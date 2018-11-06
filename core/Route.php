@@ -22,7 +22,7 @@ class Route
 
 
         if(!$url) {
-            $controller = 'App\Controllers\indexController';
+            $controller = 'App\Controllers\IndexController';
             $method = 'index';
         }
         else{
