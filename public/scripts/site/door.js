@@ -3,13 +3,14 @@ var gallery = new Vue({
     delimiters: ['${', '}'],
     data: {
         gallery: null,
+        slider: null,
         active: 0,
     },
     mounted: function () {
-        //var listPrev = document.querySelectorAll('.image-previews li');
-        //listPrev[0].classList.add('active-previews');
-
         this.gallery = UIkit.slider('.image-show-gallery');
+        UIkit.lightbox('.uk-slider-items',{
+            delayControls: 1000
+        });
     },
 
     methods:{

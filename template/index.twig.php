@@ -12,16 +12,16 @@
             <div class="slider-wrapper" uk-slideshow="min-height: 300px" id="indexSlider">
                 <ul class="uk-slideshow-items">
                     <li>
-                        <h1><span>скидки 15%</span><br /> на новые коллекции</h1>
-                        <a href="#">узнать подробнее</a>
+                        <h1><span>-20% в честь</span><br /> открытия нового магазина</h1>
+                        <a href="/stock">узнать подробнее</a>
                     </li>
                     <li>
-                        <h1><span>скидки 20%</span><br /> на новые коллекции</h1>
-                        <a href="#">узнать подробнее</a>
+                        <h1><span>уютный дом</span><br /> все скидки с одной картой</h1>
+                        <a href="/stock">узнать подробнее</a>
                     </li>
                     <li>
-                        <h1><span>скидки 25%</span><br /> на новые коллекции</h1>
-                        <a href="#">узнать подробнее</a>
+                        <h1><span>до 5 000 руб.</span><br /> скидка новоселам</h1>
+                        <a href="/stock">узнать подробнее</a>
                     </li>
                 </ul>
             </div>
@@ -126,40 +126,25 @@
             <h2><span>Межкомнатные<br/> двери</span><br/> производители</h2>
         </div>
         <div class="door-section-h door-mk-1">
-            <h3>петрушкин завод</h3>
+            <h3>Геона</h3>
             <div class="door-desc">
                 <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="/catalog?type=interior&vendor=петрушкин завод" class="yellow-but">выбрать дверь</a>
+                    <p>Двери Geona — продукт европейского уровня, соответствуют санитарно-эпидемиологическим и экологическим требованиям. На межкомнатные двери Фабрика предоставляет паспорт качества, гарантию 7 лет.</p>
+                    <a href="/catalog?type=interior&vendor=Геона" class="yellow-but">выбрать дверь</a>
                 </div>
             </div>
         </div>
         <div class="door-section-h door-mk-2">
-            <h3>Название производителя</h3>
+            <h3>Варадор</h3>
             <div class="door-desc">
                 <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
+                    <p>Однажды мы решили соединить природную грацию дерева, точность машины и труд рук мастера. Получились двери, которыми Varadoor гордится и по сей день. И наша команда продолжает постоянно двигаться вперед.</p>
+                    <a href="/catalog?type=interior&vendor=Варадор" class="yellow-but">выбрать дверь</a>
                 </div>
             </div>
-        </div>
-        <div class="door-section-v door-mk-3">
-            <h3>Название производителя</h3>
-            <div class="door-desc">
-                <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
-                </div>
-            </div>
-        </div>
-        <div class="door-section-h door-mk-4">
-            <h3>Название производителя</h3>
-            <div class="door-desc">
-                <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
-                </div>
-            </div>
+        </div><div class="door-topic">
+            <h2><span>Узнайти о</span><br /> наших акциях</h2>
+            <a class="orange-but" href="/stock">посмотреть</a>
         </div>
     </div>
 </div>
@@ -235,7 +220,7 @@
                 <div class="door-nav">
                     <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    <a class="more-product" href="#">больше товаров</a>
+                    <a class="more-product" href="/catalog?type=interior">больше товаров</a>
                 </div>
             </div>
         </div>
@@ -309,7 +294,7 @@
                 <div class="door-nav">
                     <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    <a class="more-product" href="#">больше товаров</a>
+                    <a class="more-product" href="/catalog?type=interior">больше товаров</a>
                 </div>
             </div>
         </div>
@@ -337,38 +322,11 @@
             <h2><span>Входные двери<br/> двери</span><br/> производители</h2>
         </div>
         <div class="door-section-h door-vh-1">
-            <h3>Название производителя</h3>
+            <h3>Интекрон</h3>
             <div class="door-desc">
                 <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
-                </div>
-            </div>
-        </div>
-        <div class="door-section-h door-vh-2">
-            <h3>Название производителя</h3>
-            <div class="door-desc">
-                <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
-                </div>
-            </div>
-        </div>
-        <div class="door-section-v door-vh-3">
-            <h3>Название производителя</h3>
-            <div class="door-desc">
-                <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
-                </div>
-            </div>
-        </div>
-        <div class="door-section-h door-vh-4">
-            <h3>Название производителя</h3>
-            <div class="door-desc">
-                <div class="door-desc-wrapper">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, velit!</p>
-                    <a href="#" class="yellow-but">выбрать дверь</a>
+                    <p>Современное передовое оборудование и большой опыт в производстве стальных дверей позволяет компании создавать продукт отличного качества и надежности</p>
+                    <a href="/catalog?type=entry&vendor=Интекрон" class="yellow-but">выбрать дверь</a>
                 </div>
             </div>
         </div>
@@ -446,7 +404,7 @@
                 <div class="door-nav">
                     <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    <a class="more-product" href="#">больше товаров</a>
+                    <a class="more-product" href="/catalog?type=entry">больше товаров</a>
                 </div>
             </div>
         </div>
@@ -520,7 +478,7 @@
                 <div class="door-nav">
                     <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a href="#" uk-slidenav-next uk-slider-item="next"></a>
-                    <a class="more-product" href="#">больше товаров</a>
+                    <a class="more-product" href="/catalog?type=entry">больше товаров</a>
                 </div>
             </div>
         </div>

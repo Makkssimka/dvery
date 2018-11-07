@@ -138,15 +138,15 @@ a.orange-but {
     width: auto; }
 
 .slider-wrapper {
-  margin-top: 30vh;
+  margin-top: 20vh;
   text-align: right;
   margin-bottom: 100px; }
   .slider-wrapper ul {
-    height: 270px; }
+    height: 350px; }
   .slider-wrapper h1 {
     position: relative;
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bold;
     color: #fff; }
     .slider-wrapper h1:before {
@@ -417,9 +417,12 @@ a.orange-but {
   width: 380px;
   background-color: #F4D35E;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative; }
+  .door-topic a {
+    text-align: left; }
   .door-topic p {
     position: absolute;
     top: 10px;

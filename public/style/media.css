@@ -239,13 +239,17 @@
       width: 100%;
       text-align: center;
       position: relative;
-      z-index: 10; }
+      z-index: 10;
+      margin: 0; }
     .door-topic .door-desc, .door-section-h .door-desc, .door-section-v .door-desc {
       background-color: rgba(8, 61, 119, 0.7);
+      position: relative;
+      top: 0;
       width: 100%;
-      top: 44px;
       height: auto;
       bottom: 0; }
+  .door-desc-wrapper {
+    padding: 20px; }
   .hit-wrapper {
     padding: 20px 0; }
     .hit-wrapper .item-door {

@@ -67,7 +67,7 @@
                 <p>Цена указана за дверное полотно</p>
             </div>
             <div class="button-price">
-                <a class="orange-but" href="">Где купить</a>
+                <a class="orange-but" href="/contact">Где купить</a>
             </div>
         </div>
     </div>
