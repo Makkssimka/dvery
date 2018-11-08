@@ -118,5 +118,14 @@ var gallery = new Vue({
             this.id = item.id;
             UIkit.modal('#modal-add').show();
         }
+    },
+
+    watch: {
+        newPrice: function (value) {
+            this.newPrice = value.replace(/\s/g, '').replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "$1 ");
+        },
+        oldPrice: function (value) {
+            this.oldPrice = this.oldPrice.replace(' ', '').replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "$1 ");
+        }
     }
 });

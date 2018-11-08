@@ -9,7 +9,7 @@
             <div class="logo-wrapper">
                 <img src="/public/images/logo.svg" alt="">ВИПСЕРВИС
             </div>
-            <div class="slider-wrapper" uk-slideshow="min-height: 300px" id="indexSlider">
+            <div class="slider-wrapper" uk-slideshow="min-height: 300px; autoplay: true" id="indexSlider">
                 <ul class="uk-slideshow-items">
                     <li>
                         <h1><span>-20% в честь</span><br /> открытия нового магазина</h1>
@@ -62,22 +62,23 @@
             <nav class="menu-list">
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Двери</li>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="#">Входные</a></li>
-                    <li><a href="#">Межкомнатные</a></li>
+                    <li><a href="/stock">Акции</a></li>
+                    <li><a href="/catalog?type=interior"">Входные</a></li>
+                    <li><a href="/catalog?type=entry">Межкомнатные</a></li>
                     <li><a href="/accessories">Аксессуары</a></li>
                     <li><a href="/system-door">Системы</a></li>
-                    <li><a href="/catalog">Каталог дверей</a></li>
+                    <li><a href="/guarantee">Гарантийный отдел</a></li>
                 </ul>
                 <ul class="uk-nav">
-                    <li class="uk-nav-header">Компания</li>
-                    <li><a href="/contact">Где купить</a></li>
-                    <li><a href="/stock">Акции</a></li>
-                    <li><a href="/guarantee">Гарантийный отдел</a></li>
+                    <li class="uk-nav-header">Наши услуги</li>
+                    <li><a href="http://vipservis.su/">Натяжные потолки</a></li>
+                    <li><a href="http://split.vipservis.su/">Сплит-системы</a></li>
+                    <li><a href="http://okno.vipservis.su/">Окна</a></li>
                     <li><a href="#" uk-toggle="target: #call">Вызвать замерщика</a></li>
                 </ul>
                 <ul class="uk-nav">
                     <li class="uk-nav-header">Контакты</li>
+                    <li><a href="/contact">Где купить</a></li>
                     <li><a href="tel:8 (8442) 50-69-69">8 (8442) 50-69-69</a></li>
                     <li><a href="/contact">Университетский пр-т, д.74</a></li>
                 </ul>
@@ -162,7 +163,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -172,7 +173,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -182,7 +183,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -192,7 +193,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -202,7 +203,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -212,7 +213,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -236,7 +237,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -246,7 +247,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -256,7 +257,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -266,7 +267,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -276,7 +277,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>
@@ -286,7 +287,7 @@
                         <p class="name-vendor">фирма производитель</p>
                         <p class="price">от <span>23 000</span> руб</p>
                         <div class="more-info">
-                            <a href="" class="blue-but">где купить</a>
+                            <a href="" class="blue-but">купить</a>
                             <a href="" class="more orange-but">подробнее</a>
                         </div>
                     </li>

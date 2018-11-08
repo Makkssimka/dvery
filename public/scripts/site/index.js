@@ -13,7 +13,10 @@ var header = new Vue({
         var active = this;
         UIkit.util.on('#indexSlider', 'itemshown', function (event, e) {
             active.activeSlide = e.index;
-        })
+        });
+        UIkit.slideshow('#indexSlider',{
+            autoplayInterval: 3000
+        });
     }
     ,
     methods: {

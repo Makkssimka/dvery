@@ -73,6 +73,26 @@ var catalog = new Vue({
             this.resultDoors = this.doors.slice(this.paginationPosition,  this.paginationPosition + this.paginationNum);
         }
     },
+
+    computed:{
+        checkInt: function () {
+            if(this.doorType.indexOf('interior') != -1 && this.doorType.indexOf('entry') == -1){
+                var pos = this.vendor.indexOf('Интекрон');
+                if( ~pos ) this.vendor.splice(pos, 1);
+            }
+            return this.doorType.length?((this.doorType.indexOf('interior') != -1)?false:true):false;
+
+        },
+        checkEnt: function () {
+            if(this.doorType.indexOf('entry') != -1 && this.doorType.indexOf('interior') == -1){
+                var pos = this.vendor.indexOf('Геона');
+                if( ~pos ) this.vendor.splice(pos, 1);
+                pos = this.vendor.indexOf('Варадор');
+                if( ~pos ) this.vendor.splice(pos, 1);
+            }
+            return this.doorType.length?((this.doorType.indexOf('entry') != -1)?false:true):false;
+        }
+    },
     
     watch: {
         sortDoorsVal: function (val) {
