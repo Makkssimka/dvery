@@ -31,8 +31,8 @@
                     <li class="uk-nav-header">Двери</li>
                     <li><a href="/">Главная</a></li>
                     <li><a href="/stock">Акции</a></li>
-                    <li><a href="/catalog?type=interior"">Входные</a></li>
-                    <li><a href="/catalog?type=entry">Межкомнатные</a></li>
+                    <li><a href="/catalog?type=interior">Межкомнатные</a></li>
+                    <li><a href="/catalog?type=entry">Входные</a></li>
                     <li><a href="/accessories">Аксессуары</a></li>
                     <li><a href="/system-door">Системы</a></li>
                     <li><a href="/guarantee">Гарантийный отдел</a></li>

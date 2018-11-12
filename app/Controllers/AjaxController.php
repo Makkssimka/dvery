@@ -45,7 +45,7 @@ class AjaxController
     public function getDoorsSite(Request $request){
         //if(!$request->isAjax()) die('Ошибка доступа');
 
-        $doorArray = Door::all();
+        $doorArray = Door::orderBy('id', 'desc')->get();
 
         echo json_encode($doorArray);
     }

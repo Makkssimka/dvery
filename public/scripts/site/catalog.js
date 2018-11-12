@@ -21,7 +21,6 @@ var catalog = new Vue({
     mounted: function () {
         axios.post('/get-doors-site').then(response => {
             this.doors = response.data;
-            console.log(this.doors);
             this.resetDoors = response.data.slice();
             this.paginationCount = Math.ceil(this.doors.length/this.paginationNum);
             this.resultDoors = this.doors.slice(this.paginationPosition,  this.paginationPosition + this.paginationNum);
@@ -50,12 +49,13 @@ var catalog = new Vue({
         },
         //фильтер
         filter: function () {
-            var dt, vd, ct, prFrom, prTo;
+            var dt, vd, ct, prFrom, prTo, colors;
             var doorType = this.doorType, vendor = this.vendor, colorType = this.colorType, priceFrom = this.priceFrom, priceTo = this.priceTo;
             this.doors = this.resetDoors.filter(function (elem) {
+                colors = JSON.parse(elem.color);
                 dt = doorType.length ? (doorType.indexOf(elem.category) != -1) : true;
                 vd = vendor.length ? (vendor.indexOf(elem.vendor) != -1) : true;
-                ct = colorType.length ? (colorType.indexOf(elem.colorType) != -1) : true;
+                ct = (colorType.length && colorType.length != 2) ? colors.indexOf(colorType[0]) != -1 : true;
                 prFrom = priceFrom ? (parseInt(elem.newprice.replace(' ', '')) >=  priceFrom) : true;
                 prTo = priceTo ? (parseInt(elem.newprice.replace(' ', '')) <= priceTo): true;
                 return dt && vd && ct && prFrom && prTo;

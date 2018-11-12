@@ -4,6 +4,7 @@
 <div id="doors">
     <div class="button-panel">
         <a href="#modal-add" class="uk-button uk-button-primary" uk-toggle><span uk-icon="icon: file-edit; ratio: 0.8;"></span> добавить</a>
+        <input class="uk-input uk-form-width-medium" type="text" placeholder="поиск" v-model="search">
     </div>
     <div class="table-wrapper">
         <table class="uk-table uk-table-striped uk-table-small">

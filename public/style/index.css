@@ -865,6 +865,10 @@ a.orange-but {
       background-color: #F95738;
       top: 3px;
       right: 3px; }
+    .category-filter .group-filter input[type="checkbox"]:disabled ~ label, .category-filter .group-filter input[type="checkbox"]:disabled ~ span {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.5; }
   .category-filter .filter-button {
     text-align: center;
     margin-top: 20px; }

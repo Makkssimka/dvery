@@ -74,18 +74,18 @@
                 <div class="filter-wrapper">
                     <p>Производители</p>
                     <div class="group-filter">
-                        <label for="geona">геона</label>
                         <input type="checkbox" value="Геона" id="geona" v-model="vendor" v-bind:disabled="checkInt">
+                        <label for="geona">геона</label>
                         <span class="check-custom"></span>
                     </div>
                     <div class="group-filter">
-                        <label for="varador">варадор</label>
                         <input type="checkbox" value="Варадор" id="varador" v-model="vendor" v-bind:disabled="checkInt">
+                        <label for="varador">варадор</label>
                         <span class="check-custom"></span>
                     </div>
                     <div class="group-filter">
-                        <label for="intecron">интекрон</label>
                         <input type="checkbox" value="Интекрон" id="intecron" v-model="vendor" v-bind:disabled="checkEnt">
+                        <label for="intecron">интекрон</label>
                         <span class="check-custom"></span>
                     </div>
                 </div>

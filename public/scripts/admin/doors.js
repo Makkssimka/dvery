@@ -12,6 +12,7 @@ var gallery = new Vue({
         vendor: '',
         colors: [],
         listDoors: [],
+        resetDoors: [],
         defaultDesc: [
             {name: 'Размер', value: '600, 700, 800, 900 x 2000 мм'},
             {name: 'Покрытие', value: 'ЭКОшпон'},
@@ -28,11 +29,13 @@ var gallery = new Vue({
             {name: 'Наличник', value: 'Телескопический'},
             {name: 'Открывание', value: 'Универсальное'}
         ],
-        imagesList: []
+        imagesList: [],
+        search: ''
     },
     mounted: function () {
         axios.post('/admin/get-doors').then(response => {
             this.listDoors = response.data;
+            this.resetDoors = this.listDoors.slice();
         });
     },
 
@@ -66,12 +69,14 @@ var gallery = new Vue({
 
         },
         clear: function () {
-            this.name = this.preview = this.previewName = this.newPrice = this.oldPrice = this.category = this.vendor = '';
+            this.name = this.preview = this.previewName = this.newPrice = this.oldPrice = this.vendor = '';
+            this.category = 'interior';
             this.colors.length = this.imagesList.length = 0;
             this.desc = this.defaultDesc.slice();
         },
         close: function(){
-            this.name = this.preview = this.previewName = this.newPrice = this.oldPrice = this.category = this.vendor = '';
+            this.name = this.preview = this.previewName = this.newPrice = this.oldPrice = this.vendor = '';
+            this.category = 'interior';
             this.colors.length = this.imagesList.length = 0;
             this.desc = this.defaultDesc.slice();
             UIkit.modal('#modal-add').hide();
@@ -91,7 +96,8 @@ var gallery = new Vue({
             console.log(name);
             axios.post('/admin/add-door', data).then(response => {
                 this.listDoors = response.data;
-                this.name = this.preview = this.previewName = this.newPrice = this.oldPrice = this.category = this.vendor = '';
+                this.name = this.preview = this.previewName = this.newPrice = this.oldPrice = this.vendor = '';
+                this.category = 'interior';
                 this.colors.length = this.imagesList.length = 0;
                 this.desc = this.defaultDesc.slice();
                 UIkit.modal('#modal-add').hide();
@@ -125,7 +131,17 @@ var gallery = new Vue({
             this.newPrice = value.replace(/\s/g, '').replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "$1 ");
         },
         oldPrice: function (value) {
-            this.oldPrice = this.oldPrice.replace(' ', '').replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "$1 ");
+            this.oldPrice = value.replace(' ', '').replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "$1 ");
+        },
+        search: function (value) {
+            if(value.length > 3){
+                this.listDoors = this.resetDoors.filter(function (elem) {
+                    return elem.name.toLowerCase().indexOf(value.toLowerCase()) != -1;
+                });
+            }
+            else{
+                this.listDoors = this.resetDoors.slice();
+            }
         }
     }
 });

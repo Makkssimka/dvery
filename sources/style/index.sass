@@ -851,6 +851,11 @@ a.orange-but
         background-color: $orange
         top: 3px
         right: 3px
+    input[type="checkbox"]:disabled
+      &~label,&~span
+        pointer-events: none
+        cursor: default
+        opacity: 0.5
   .filter-button
     text-align: center
     margin-top: 20px

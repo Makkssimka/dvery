@@ -1,5 +1,8 @@
 /node_modules/
 /vendor/
+/public/images/doors/
+/public/images/handle/
+
 
 .*
 !.gitattributes

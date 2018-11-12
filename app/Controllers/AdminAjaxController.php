@@ -56,7 +56,7 @@ class AdminAjaxController
     }
 
     public function getDoors(Request $request){
-        $doors = Door::all();
+        $doors = Door::orderBy('id', 'desc')->get();
         echo $doors;
     }
 
